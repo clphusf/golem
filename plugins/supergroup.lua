@@ -1814,9 +1814,9 @@ local function run(msg, matches)
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
 					mute(chat_id, msg_type)
-					return "بی صدای همه فعال شد"
+					return "چت قفل شد"
 				else
-					return "بی صدای همه در حال حاظر فعال است"
+					return "چت در حال حاظر قفل می باشد"
 				end
 			end
 		end
@@ -1887,9 +1887,9 @@ local function run(msg, matches)
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
 					unmute(chat_id, msg_type)
-					return "بی صدای همه غیر فعال شد"
+					return "چت باز شد"
 				else
-					return "بی صدای همه در حال حاظر غیر فعال است"
+					return "چت در حال حاظر باز می باشد"
 				end
 			end
 		end
