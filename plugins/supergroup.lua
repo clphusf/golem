@@ -1735,21 +1735,21 @@ local function run(msg, matches)
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] set flood to ["..matches[2].."]")
 			return 'حساسیت اسپم تغییر یافت به : '..matches[2]
 		end
-		if matches[1] == 'public' and is_momod(msg) then
+		if matches[1] == 'پابلیک' and is_momod(msg) then
 			local target = msg.to.id
-			if matches[2] == 'yes' then
+			if matches[2] == 'خیر' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] set group to: public")
 				return set_public_membermod(msg, data, target)
 			end
-			if matches[2] == 'no' then
+			if matches[2] == 'بله' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: not public")
 				return unset_public_membermod(msg, data, target)
 			end
 		end
 
-		if matches[1] == 'mute' and is_owner(msg) then
+		if matches[1] == 'بی صدا' and is_owner(msg) then
 			local chat_id = msg.to.id
-			if matches[2] == 'audio' then
+			if matches[2] == 'صدا' then
 			local msg_type = 'Audio'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
@@ -1759,7 +1759,7 @@ local function run(msg, matches)
 					return "بی صدای صوت در سوپرگروه فعال است"
 				end
 			end
-			if matches[2] == 'photo' then
+			if matches[2] == 'عکس' then
 			local msg_type = 'Photo'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
@@ -1769,7 +1769,7 @@ local function run(msg, matches)
 					return "بی صدای تصاویر در سوپرگروه فعال است"
 				end
 			end
-			if matches[2] == 'video' then
+			if matches[2] == 'فیلم' then
 			local msg_type = 'Video'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
@@ -1779,7 +1779,7 @@ local function run(msg, matches)
 					return "بی صدای ویدیو در سوپرگروه فعال است"
 				end
 			end
-			if matches[2] == 'gifs' then
+			if matches[2] == 'گیف' then
 			local msg_type = 'Gifs'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
@@ -1789,7 +1789,7 @@ local function run(msg, matches)
 					return "بی صدای گیف در حال حاظر فعال است"
 				end
 			end
-			if matches[2] == 'documents' then
+			if matches[2] == 'اسناد' then
 			local msg_type = 'Documents'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
@@ -1799,7 +1799,7 @@ local function run(msg, matches)
 					return "بی صدای اسناد در حال حاظر فعال است"
 				end
 			end
-			if matches[2] == 'text' then
+			if matches[2] == 'متن' then
 			local msg_type = 'Text'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
@@ -1809,7 +1809,7 @@ local function run(msg, matches)
 					return "بی صدای متن در حال حاظر فعال است"
 				end
 			end
-			if matches[2] == 'all' then
+			if matches[2] == 'چت' then
 			local msg_type = 'All'
 				if not is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: mute "..msg_type)
@@ -1820,9 +1820,9 @@ local function run(msg, matches)
 				end
 			end
 		end
-		if matches[1] == 'unmute' and is_momod(msg) then
+		if matches[1] == 'با صدا' and is_momod(msg) then
 			local chat_id = msg.to.id
-			if matches[2] == 'audio' then
+			if matches[2] == 'صدا' then
 			local msg_type = 'Audio'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
@@ -1832,7 +1832,7 @@ local function run(msg, matches)
 					return "صوت در حال حاظر با صدا است"
 				end
 			end
-			if matches[2] == 'photo' then
+			if matches[2] == 'عکس' then
 			local msg_type = 'Photo'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
@@ -1842,7 +1842,7 @@ local function run(msg, matches)
 					return "تصویر در حال حاظر با صدا است"
 				end
 			end
-			if matches[2] == 'video' then
+			if matches[2] == 'فیلم' then
 			local msg_type = 'Video'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
@@ -1852,7 +1852,7 @@ local function run(msg, matches)
 					return "ویدیو در حال حاظر با صدا است"
 				end
 			end
-			if matches[2] == 'gifs' then
+			if matches[2] == 'گیف' then
 			local msg_type = 'Gifs'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
@@ -1862,7 +1862,7 @@ local function run(msg, matches)
 					return "گیف در حال حاظر با صدا است"
 				end
 			end
-			if matches[2] == 'documents' then
+			if matches[2] == 'اسناد' then
 			local msg_type = 'Documents'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
@@ -1872,7 +1872,7 @@ local function run(msg, matches)
 					return "اسناد در حال حاظر با صدا است"
 				end
 			end
-			if matches[2] == 'text' then
+			if matches[2] == 'متن' then
 			local msg_type = 'Text'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute message")
@@ -1882,7 +1882,7 @@ local function run(msg, matches)
 					return "متن در حال حاظر با صدا است"
 				end
 			end
-			if matches[2] == 'all' then
+			if matches[2] == 'چت' then
 			local msg_type = 'All'
 				if is_muted(chat_id, msg_type..': yes') then
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: unmute "..msg_type)
@@ -1895,7 +1895,7 @@ local function run(msg, matches)
 		end
 
 
-		if matches[1] == "muteuser" and is_momod(msg) then
+		if matches[1] == "بی صدا کردن" and is_momod(msg) then
 			local chat_id = msg.to.id
 			local hash = "mute_user"..chat_id
 			local user_id = ""
@@ -1903,7 +1903,7 @@ local function run(msg, matches)
 				local receiver = get_receiver(msg)
 				local get_cmd = "mute_user"
 				muteuser = get_message(msg.reply_id, get_message_callback, {receiver = receiver, get_cmd = get_cmd, msg = msg})
-			elseif matches[1] == "muteuser" and string.match(matches[2], '^%d+$') then
+			elseif matches[1] == "بی صدا کردن" and string.match(matches[2], '^%d+$') then
 				local user_id = matches[2]
 				if is_muted_user(chat_id, user_id) then
 					unmute_user(chat_id, user_id)
@@ -1914,7 +1914,7 @@ local function run(msg, matches)
 					savelog(msg.to.id, name_log.." ["..msg.from.id.."] added ["..user_id.."] to the muted users list")
 					return "به لیست افراد بی صدا اضافه شد["..user_id.."]"
 				end
-			elseif matches[1] == "muteuser" and not string.match(matches[2], '^%d+$') then
+			elseif matches[1] == "بی صدا کردن" and not string.match(matches[2], '^%d+$') then
 				local receiver = get_receiver(msg)
 				local get_cmd = "mute_user"
 				local username = matches[2]
@@ -1923,7 +1923,7 @@ local function run(msg, matches)
 			end
 		end
 
-		if matches[1] == "muteslist" and is_momod(msg) then
+		if matches[1] == "لیست افراد بی صدا" and is_momod(msg) then
 			local chat_id = msg.to.id
 			if not has_mutes(chat_id) then
 				set_mutes(chat_id)
@@ -1932,7 +1932,7 @@ local function run(msg, matches)
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup muteslist")
 			return mutes_list(chat_id)
 		end
-		if matches[1] == "mutelist" and is_momod(msg) then
+		if matches[1] == "لیست بی صدا" and is_momod(msg) then
 			local chat_id = msg.to.id
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup mutelist")
 			return muted_user_list(chat_id)
@@ -1949,7 +1949,7 @@ local function run(msg, matches)
 			return get_rules(msg, data)
 		end
 
-		if matches[1] == 'help' and not is_owner(msg) then
+		if matches[1] == 'راهنما' and not is_owner(msg) then
 			text = "فقط مخصوص مدیران می باشد"
 			reply_msg(msg.id, text, ok_cb, false)
 		elseif matches[1] == 'help' and is_owner(msg) then
@@ -2056,18 +2056,18 @@ return {
 	"^[#!/]([Dd]el)$",
 	"^[#!/]([Ll]ock) (.*)$",
 	"^[#!/]([Uu]nlock) (.*)$",
-	"^[#!/]([Mm]ute) ([^%s]+)$",
-	"^[#!/]([Uu]nmute) ([^%s]+)$",
-	"^[#!/]([Mm]uteuser)$",
-	"^[#!/]([Mm]uteuser) (.*)$",
-	"^[#!/]([Pp]ublic) (.*)$",
+	"^بی صدا ([^%s]+)$",
+	"^با صدا ([^%s]+)$",
+	"^بی صدا کردن$",
+	"^بی صدا کردن (.*)$",
+	"^پابلیک (.*)$",
 	"^تنظیمات$",
 	"^[#!/]([Rr]ules)$",
 	"^[#!/]([Ss]etflood) (%d+)$",
 	"^[#!/]([Cc]lean) (.*)$",
 	"^[#!/]([Hh]elp)$",
-	"^[#!/]([Mm]uteslist)$",
-	"^[#!/]([Mm]utelist)$",
+	"^لیست افراد بی صدا$",
+	"^لیست بی صدا$",
         "[#!/](mp) (.*)",
 	"[#!/](md) (.*)",
         "^(https://telegram.me/joinchat/%S+)$",
