@@ -208,14 +208,11 @@ function create_config( )
   config = {
     enabled_plugins = {
     "admin",
-    "calc",
     "onservice",
-    "plugins",
     "inrealm",
     "ingroup",
     "inpm",
     "banhammer",
-    "filter",
     "stats",
     "tagall",
     "anti_spam",
