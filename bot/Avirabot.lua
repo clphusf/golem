@@ -217,7 +217,7 @@ function create_config( )
     "banhammer",
     "filter",
     "stats",
-    "s2a",
+    "tagall",
     "anti_spam",
     "owners",
     "arabic_lock",
