@@ -8,7 +8,7 @@ local function save_value(msg, name, value)
   end
   if hash then
     redis:hset(hash, name, value)
-    return ..name" ذخیره شد "
+    return "دخیره شد"..name
   end
 end
 local function run(msg, matches)
