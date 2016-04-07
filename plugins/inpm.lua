@@ -119,7 +119,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 			return 'شما بن شدید'
 		end
 		if data[tostring(target)]['settings']['lock_member'] == 'yes' and not is_owner2(msg.from.id, '36088606') then
-			return 'Group is private.'
+			return 'گروه شخصی می باشد'
 		end
 		if is_admin1(msg) then
 			user_type = 'admin'
@@ -208,7 +208,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 
 	if matches[1] == 'help' and msg.to.type == 'user' or matches[1] == 'pmhelp' and is_admin1(msg) and msg.to.type ~= 'user' then
       	savelog(msg.to.id, name_log.." ["..msg.from.id.."] used pm help")
-		text = "Avira PV Commands List :\n\n!google (متن)\nسرچ کردن یک متن در گوگل\n\n!help\nدریافت راهنمای ربات\n\n!git (یوزرنیم)\nسرچ کردن یک یوزرنیم در گیت هاب\n\n!botnumber\nدریافت شماره ربات\n!calc 3*1\n\n!aparat ((سرچ کردن یک متن در آپارات\n\n"
+	text = "🚀 Avira PV Commands List :\n\n!google (متن)\nسرچ کردن یک متن در گوگل\n\n!help\nدریافت راهنمای ربات\n\n!git (یوزرنیم)\nسرچ کردن یک یوزرنیم در گیت هاب\n\n!botnumber\nدریافت شماره ربات\n\n
      	return text
     end
 
