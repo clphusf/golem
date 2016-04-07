@@ -8,7 +8,7 @@ local function set_pass(msg, pass, id)
   local name = string.gsub(msg.to.print_name, '_', '')
   if hash then
     redis:hset(hash, pass, id)
-      return send_large_msg("channel#id"..msg.to.id, "ߔ᠐ پسورد گروه ["..name.."] تنظیم شد به : \n\n "..pass.."\n\n"
+      return send_large_msg("channel#id"..msg.to.id, "ߔ᠐ پسورد گروه ["..name.."] تنظیم شد به : \n\n "..pass.."\n\n")
   end
 end
 
