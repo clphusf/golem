@@ -3,12 +3,12 @@ local SUDO = 179071599 --put your id here(BOT OWNER ID)
 
 local function setrank(msg, name, value) -- setrank function
   local hash = nil
-  if msg.to.type == 'chat' then
+  if msg.to.type == 'channel' then
     hash = 'rank:'..msg.to.id..':variables'
   end
   if hash then
     redis:hset(hash, name, value)
-	return send_msg('chat#id'..msg.to.id, 'مقام کاربر ('..name..') به '..value..' تغییر داده شد ', ok_cb,  true)
+	return send_msg('channel#id'..msg.to.id, 'مقام کاربر ('..name..') به '..value..' تغییر داده شد ', ok_cb,  true)
   end
 end
 local function res_user_callback(extra, success, result) -- /info <username> function
@@ -190,7 +190,7 @@ local function run(msg, matches)
   	 local um_hash = 'msgs:'..msg.from.id..':'..msg.to.id
 	 user_info_msgs = tonumber(redis:get(um_hash) or 0)
 	 text = text..'تعداد پیام های فرستاده شده : '..user_info_msgs..'\n\n'
-	 if msg.to.type == 'chat' then
+	 if msg.to.type == 'channel' then
 	 text = text..'نام گروه : '..msg.to.title..'\n'
      text = text..'ایدی گروه : '..msg.to.id
     end
