@@ -251,101 +251,7 @@ An advanced administration bot based on TG-CLI written in Lua
 👤 sudo : @mohammadarak
 ]],
     help_text_realm = [[ ]],
-    help_text = [[
-🚀 Avira V5 Commands list :
-
-!kick [یوزرنیم|آیدی]
-اخراج فرد توسط یوزرنیم و آیدی یا ریپلی
-
-!ban [یوزرنیم|آیدی]
-بن کردن شخصی از گروه توسط آیدی و یوزرنیم یا ریپلی
-
-!unban [id]
-آنبن کردن شخصی از گروه توسط آیدی و یوزرنیم یا ریپلی
-
-!modlist
-دریافت لیست مدیران
-
-!promote [یوزرنیم]
-اضافه کردن مدیر
-
-!demote [یوزرنیم]
-حذف کردن مدیر
-
-!kickme
-خروج از گروه
-
-!about
-دریافت درباره گروه
-
-!setphoto
-تنظیم و قفل کردن عکس گروه
-
-!setname [name]
-تنظیم و قفل کردن نام گروه
-
-!rules
-دریافت قوانین گروه
-
-!id
-دریافت آیدی گروه یا اعضا
-
-!help
-دریافت راهنما
-
-!lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-قفل کردن تنظیمات گروه
-
-!unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
-بازکردن تنظیمات گروه
-
-!mute [chat|audio|gifs|photo|video]
-بی صدا کردن ویدیو و عکس و غیره
-
-!unmute [chat|audio|gifs|photo|video]
-با صدا کردن ویدیو و عکس و غیره
-
-!setrules <قوانین>
-تنظیم کردن قوانین
-
-!settings
-دریافت تنظیمات گروه
-
-!muteslist
-دریافت لیست مدیا های بی صدا
-
-!newlink
-ایجاد لینک جدید
-
-!link
-دریافت لینک
-
-!owner
-دریافت آیدی مدیر گروه
-
-!setowner [id]
-تنظیم کردن مدیر اصلی گروه
-
-!setflood [value]
-تنظیم کردن حساسیت اسپم
-
-!stats
-دریافت تعداد پیام های هر فرد
-
-!save [متن] [موضوع]
-ذخیره کردن متن
-
-!get [موضوع]
-دریافت متن ذخیره شده
-
-!clean [modlist|rules|about]
-حذف کردن لیست مدیران ، درباره یا قوانین
-
-!banlist
-دریافت لیست اعضای بن شده
-
-** شما می توانید در اول هر دستوری از ! و / و # استفاده کنید **
-]],
+    help_text = [[ ]],
 	help_text_super =[[
 🚀 Avira V5 SuperGroup Commands:
 
@@ -353,13 +259,13 @@ An advanced administration bot based on TG-CLI written in Lua
 دریافت آیدی مدیر اصلی گروه
 
 !modlist
-دریافت لیست مدیران سوپرگروه
-
-!who
-دریافت لیست تمام اعضای سوپرگروه
+دریافت لیست معاونان سوپرگروه
 
 !block
 اخراج و اضافه کردن یک فرد به لیست بلاک
+
+!unblock
+خارج کردن شخصی از بلاک
 
 !ban
 بن کردن فردی از سوپرگروه
@@ -418,9 +324,6 @@ An advanced administration bot based on TG-CLI written in Lua
 !settings
 دریافت تنظیمات سوپرگروه
 
-!muteslist
-دریافت لیست تایپ های بی صدای گروه
-
 !banlist
 دریافت لیست اعضای بن شده
 
@@ -438,6 +341,33 @@ An advanced administration bot based on TG-CLI written in Lua
 
 !google 
 سرچ کردن در گوگل
+
+!aparat متن
+سرچ کردن یک متن در آپارات
+
+!praytime (شهر)
+دریافت وقت اذان یک شهر
+
+(بگو (متن
+تکرار یک متن توسط ربات
+
+!gif متن
+سرچ کردن یک متن و دریافت به صورت گیف
+
+!gps (شهر) (کشور)
+دریافت مکان مورد نظر از گوگل
+
+!insta (یوزرنیم اینستا)
+سرچ کردن یک یوزرنیم در اینستاگرام
+
+!tophoto 
+تبدیل کردن استیکر به عکس توسط ریپلی
+
+!tosticker
+تبدیل کردن عکس به استیکر توسط ریپلی
+
+!voice متن
+دریافت متن به صورت صدا
 
 ** شما می توانید در اول تمام دستورات از ! و / و # استفاده کنید **
 ]],
