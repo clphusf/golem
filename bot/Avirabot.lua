@@ -215,7 +215,6 @@ function create_config( )
     "info",
     "botnumber",
     "banhammer",
-    "stats",
     "tagall",
     "anti_spam",
     "echo",
@@ -340,17 +339,11 @@ An advanced administration bot based on TG-CLI written in Lua
 	help_text_super =[[
 🚀 Avira V5 SuperGroup Commands:
 
-!admins
-دریافت لیست مدیران سوپرگروه
-
 !owner
 دریافت آیدی مدیر اصلی گروه
 
 !modlist
 دریافت لیست مدیران سوپرگروه
-
-!bots
-دریافت لیست ربات های درون سوپرگروه
 
 !who
 دریافت لیست تمام اعضای سوپرگروه
