@@ -6,9 +6,9 @@ end
 
 return {
 patterns = {
-"^!botnumber$"
-"^/botnumber$"
-"^#botnumber$"
+"^(!botnumber)$"
+"^(/botnumber)$"
+"^(#botnumber)$"
 },
 run = run
 }
