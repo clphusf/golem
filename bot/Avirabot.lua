@@ -224,8 +224,6 @@ function create_config( )
     "group_pass",
     "dad",
     "tagall",
-    "time",
-    "plugins",
     "echo",
     "echo+",
     "echo+1",
