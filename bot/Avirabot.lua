@@ -237,7 +237,7 @@ function create_config( )
     "leave_ban",
     "supergroup",
     "whitelist",
-    "msg_checks"
+    "msg_checks",
     "wiki",
     },
     sudo_users = {179071599},--Sudo users
