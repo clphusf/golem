@@ -233,6 +233,7 @@ function create_config( )
     "gif",
     "owners",
     "set",
+    "spam",
     "get",
     "github",
     "broadcast",
