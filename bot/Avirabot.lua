@@ -208,12 +208,11 @@ function create_config( )
   config = {
     enabled_plugins = {
     "admin",
-    "all",
     "arabic_lock",
     "onservice",
     "inrealm",
-    "ingroup",
     "inpm",
+    "botnumber",
     "banhammer",
     "stats",
     "tagall",
