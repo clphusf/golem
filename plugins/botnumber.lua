@@ -6,8 +6,9 @@ end
 
 return {
 patterns = {
-"^[!#/]([Bb]otnumber)$"
-
+"^!botnumber$"
+"^/botnumber$"
+"^#botnumber$"
 },
 run = run
 }
