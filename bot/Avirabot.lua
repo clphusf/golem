@@ -218,10 +218,13 @@ function create_config( )
     "inrealm",
     "inpm",
     "info",
+    "filtering",
+    "reboot",
     "banhammer",
     "group_pass",
     "dad",
     "tagall",
+    "time",
     "plugins",
     "echo",
     "echo+",
@@ -360,14 +363,38 @@ An advanced administration bot based on TG-CLI written in Lua
 !insta (یوزرنیم اینستا)
 سرچ کردن یک یوزرنیم در اینستاگرام
 
-!tophoto 
-تبدیل کردن استیکر به عکس توسط ریپلی
-
 !tosticker
 تبدیل کردن عکس به استیکر توسط ریپلی
 
 !voice متن
 دریافت متن به صورت صدا
+
+!filter + کلمه
+فیلتر کردن یک کلمه
+
+!filter - کلمه
+حذف فیلتر بودن یک کلمه
+
+!filterlist
+دریافت لیست فیلتر
+
+!setpass پسورد
+ذخیره کردن پسورد برای یک گروه
+
+!pass
+دریافت پسورد گروه
+
+!join پسورد
+اضافه شدن به یک گروه توسط پسورد
+
+!info
+دریافت اطلاعات یک فرد
+
+!qr
+دریافت هر چیزی به صورت بارکد
+
+!time
+دریافت زمان و تاریخ
 
 ** شما می توانید در اول تمام دستورات از ! و / و # استفاده کنید **
 ]],
