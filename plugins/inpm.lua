@@ -208,7 +208,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 
 	if matches[1] == 'help' and msg.to.type == 'user' or matches[1] == 'pmhelp' and is_admin1(msg) and msg.to.type ~= 'user' then
       	savelog(msg.to.id, name_log.." ["..msg.from.id.."] used pm help")
-	text = "🚀 Avira PV Commands List :\n\n!google (متن)\nسرچ کردن یک متن در گوگل\n\n!help\nدریافت راهنمای ربات\n\n!git (یوزرنیم)\nسرچ کردن یک یوزرنیم در گیت هاب\n\n!botnumber\nدریافت شماره ربات\n\n
+	text = "فقط در سوپرگروها فعال است برای خرید گروه به آیدی @mohammadarak مراجعه کنید"
      	return text
     end
 
