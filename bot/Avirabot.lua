@@ -253,9 +253,6 @@ An advanced administration bot based on TG-CLI written in Lua
 !unban [id]
 آنبن کردن شخصی از گروه توسط آیدی و یوزرنیم یا ریپلی
 
-!who
-دریافت لیست اعضا
-
 !modlist
 دریافت لیست مدیران
 
@@ -292,29 +289,20 @@ An advanced administration bot based on TG-CLI written in Lua
 !unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
 بازکردن تنظیمات گروه
 
-!mute [all|audio|gifs|photo|video]
+!mute [chat|audio|gifs|photo|video]
 بی صدا کردن ویدیو و عکس و غیره
 
-!unmute [all|audio|gifs|photo|video]
+!unmute [chat|audio|gifs|photo|video]
 با صدا کردن ویدیو و عکس و غیره
 
-!set rules <قوانین>
+!setrules <قوانین>
 تنظیم کردن قوانین
-
-!set about <درباره>
-تنظیم کردن درباره
 
 !settings
 دریافت تنظیمات گروه
 
 !muteslist
 دریافت لیست مدیا های بی صدا
-
-!muteuser [username]
-بی صدا کردن فردی در گروه
-
-!mutelist
-دریافت لیست افراد بی صدا
 
 !newlink
 ایجاد لینک جدید
@@ -343,9 +331,6 @@ An advanced administration bot based on TG-CLI written in Lua
 !clean [modlist|rules|about]
 حذف کردن لیست مدیران ، درباره یا قوانین
 
-!res
-دریافت آیدی عددی فرد
-
 !banlist
 دریافت لیست اعضای بن شده
 
@@ -353,9 +338,6 @@ An advanced administration bot based on TG-CLI written in Lua
 ]],
 	help_text_super =[[
 🚀 Avira V5 SuperGroup Commands:
-
-!info
-دریافت اطلاعات شخصی سوپرگروه
 
 !admins
 دریافت لیست مدیران سوپرگروه
@@ -405,9 +387,6 @@ An advanced administration bot based on TG-CLI written in Lua
 !setrules
 تنظیم قوانین گروه
 
-!setabout
-تنظیم درباره گروه
-
 !newlink
 ایجاد لینک جدید
 
@@ -423,10 +402,10 @@ An advanced administration bot based on TG-CLI written in Lua
 !unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict]
 بازکردن تنظیمات سوپرگروه
 
-!mute [all|audio|gifs|photo|video|service]
+!mute [chat|audio|gifs|photo|video|service]
 بی صدا کردن یک تایپ در سوپرگروه
 
-!unmute [all|audio|gifs|photo|video|service]
+!unmute [chat|audio|gifs|photo|video|service]
 با صدا کردن یک تایپ در سوپرگروه
 
 !setflood [عدد]
@@ -437,12 +416,6 @@ An advanced administration bot based on TG-CLI written in Lua
 
 !muteslist
 دریافت لیست تایپ های بی صدای گروه
-
-!muteuser [username]
-بی صدا کردن فردی در سوپرگروه
-
-!mutelist
-دریافت لیست اعضای بی صدا
 
 !banlist
 دریافت لیست اعضای بن شده
@@ -456,23 +429,11 @@ An advanced administration bot based on TG-CLI written in Lua
 !public [yes|no]
 پابلیک یا خصوصی کردن یک سوپرگروه
 
-!res
-دریافت آیدی عددی فرد
-
-!addword (متن)
-فیلتر کردن یک متن
-
-!rw (متن)
-حذف کردن فیلتر یک متن
-
-!filterlist
-دریافت لیست فیلتر
-
-!cleanfilter
-حذف لیست فیلتر
-
 !git (یوزرنیم)
 دریافت اطلاعات یک یوزرنیم در گیت هاب
+
+!google 
+سرچ کردن در گوگل
 
 ** شما می توانید در اول تمام دستورات از ! و / و # استفاده کنید **
 ]],
