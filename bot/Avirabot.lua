@@ -215,6 +215,7 @@ function create_config( )
     "inrealm",
     "inpm",
     "banhammer",
+    "dad",
     "tagall",
     "plugins",
     "echo",
