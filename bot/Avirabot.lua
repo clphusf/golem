@@ -213,7 +213,6 @@ function create_config( )
     "arabic_lock",
     "anti_spam",
     "addplug",
-    "auto_leave",
     "azan",
     "plugins",
     "onservice",
