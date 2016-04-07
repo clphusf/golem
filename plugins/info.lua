@@ -22,24 +22,24 @@ local function res_user_callback(extra, success, result) -- /info <username> fun
   end
     local text = '➰ نام کامل : '..(result.first_name or '')..' '..(result.last_name or '')..'\n'
                ..'🔢 یوزرنیم : '..Username..'\n'
-               ..'🆔 آیدی : '..result.id..'\n\n'
+               ..'🆔 آیدی : '..result.id..'\n'
                .."📱 شماره : +"..(msg.from.phone or '----')..'\n'
 	local hash = '👤 مقام :'..extra.chat2..':variables'
 	local value = redis:hget(hash, result.id)
     if not value then
 	 if result.id == tonumber(Arian) then
-	   text = text..'👤 مقام : سودو \n\n'
+	   text = text..'👤 مقام : سودو \n'
 	  elseif is_admin2(result.id) then
-	   text = text..'👤 مقام : مدیر ربات \n\n'
+	   text = text..'👤 مقام : مدیر ربات \n'
 	  elseif is_owner2(result.id, extra.chat2) then
-	   text = text..'👤 مقام : مدیر اصلی گروه \n\n'
+	   text = text..'👤 مقام : مدیر اصلی گروه \n'
 	  elseif is_momod2(result.id, extra.chat2) then
-	    text = text..'👤 مقام : مدیر گروه \n\n'
+	    text = text..'👤 مقام : مدیر گروه \n'
       else
-	    text = text..'👤 مقام : فرد عادی \n\n'
+	    text = text..'👤 مقام : فرد عادی \n'
 	 end
    else
-   text = text..'👤 مقام : '..value..'\n\n'
+   text = text..'👤 مقام : '..value..'\n'
   end
   local uhash = 'user:'..result.id
   local user = redis:hgetall(uhash)
@@ -62,7 +62,7 @@ local function action_by_id(extra, success, result)  -- /info <ID> function
  end
    local text = '➰ نام کامل : '..(result.first_name or '')..' '..(result.last_name or '')..'\n'
                ..'🔢 یوزرنیم : '..Username..'\n'
-               ..'🆔 آیدی : '..result.id..'\n\n'
+               ..'🆔 آیدی : '..result.id..'\n'
                .."📱 شماره : +"..(msg.from.phone or '----')..'\n'
   local hash = '👤 مقام :'..extra.chat2..':variables'
   local value = redis:hget(hash, result.id)
@@ -70,22 +70,22 @@ local function action_by_id(extra, success, result)  -- /info <ID> function
 	 if result.id == tonumber(Arian) then
 	   text = text..'👤 مقام : سودو \n\n'
 	  elseif is_admin2(result.id) then
-	   text = text..'👤 مقام : مدیر ربات \n\n'
+	   text = text..'👤 مقام : مدیر ربات \n'
 	  elseif is_owner2(result.id, extra.chat2) then
-	   text = text..'👤 مقام : مدیر اصلی گروه \n\n'
+	   text = text..'👤 مقام : مدیر اصلی گروه \n'
 	  elseif is_momod2(result.id, extra.chat2) then
-	   text = text..'👤 مقام : مدیر گروه \n\n'
+	   text = text..'👤 مقام : مدیر گروه \n'
 	  else
-	   text = text..'👤 مقام : فرد عادی \n\n'
+	   text = text..'👤 مقام : فرد عادی \n'
 	  end
    else
-    text = text..'👤 مقام : '..value..'\n\n'
+    text = text..'👤 مقام : '..value..'\n'
   end
   local uhash = 'user:'..result.id
   local user = redis:hgetall(uhash)
   local um_hash = 'msgs:'..result.id..':'..extra.chat2
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
-  text = text..'✉️ تعداد پیام ها : '..user_info_msgs..'\n\n'
+  text = text..'✉️ تعداد پیام ها : '..user_info_msgs..'\n'
   text = text..'Avira V5'
   send_msg(extra.receiver, text, ok_cb,  true)
   else
@@ -101,31 +101,31 @@ local function action_by_reply(extra, success, result)-- (reply) /info  function
 		 end
   local text = '➰ نام کامل : '..(result.from.first_name or '')..' '..(result.from.last_name or '')..'\n'
                ..'🔢 یوزرنیم : '..Username..'\n'
-               ..'🆔 آیدی : '..result.from.id..'\n\n'
+               ..'🆔 آیدی : '..result.from.id..'\n'
 	           .."📱 شماره : +"..(msg.from.phone or '----')..'\n'
 	local hash = '👤 مقام :'..result.to.id..':variables'
 		local value = redis:hget(hash, result.from.id)
 		 if not value then
 		    if result.from.id == tonumber(Arian) then
-		       text = text..'👤 مقام : سودو \n\n'
+		       text = text..'👤 مقام : سودو \n'
 		     elseif is_admin2(result.from.id) then
-		       text = text..'👤 مقام : مدیر ربات \n\n'
+		       text = text..'👤 مقام : مدیر ربات \n'
 		     elseif is_owner2(result.from.id, result.to.id) then
-		       text = text..'👤 مقام : مدیر اصلی گروه \n\n'
+		       text = text..'👤 مقام : مدیر اصلی گروه \n'
 		     elseif is_momod2(result.from.id, result.to.id) then
-		       text = text..'👤 مقام : مدیر گروه \n\n'
+		       text = text..'👤 مقام : مدیر گروه \n'
 		 else
-		       text = text..'👤 مقام : فرد عادی \n\n'
+		       text = text..'👤 مقام : فرد عادی \n'
 			end
 		  else
-		   text = text..'👤 مقام : '..value..'\n\n'
+		   text = text..'👤 مقام : '..value..'\n'
 		 end
          local user_info = {} 
   local uhash = 'user:'..result.from.id
   local user = redis:hgetall(uhash)
   local um_hash = 'msgs:'..result.from.id..':'..result.to.id
   user_info_msgs = tonumber(redis:get(um_hash) or 0)
-  text = text..'✉️ تعداد پیام ها : '..user_info_msgs..'\n\n'
+  text = text..'✉️ تعداد پیام ها : '..user_info_msgs..'\n'
   text = text..'Avira V5'
   send_msg(extra.receiver, text, ok_cb, true)
 end
@@ -170,21 +170,21 @@ local function run(msg, matches)
    local text = text..'➰ نام خانوادگی : '..(msg.from.last_name or '----')..'\n'	
    local text = text..'📱 شماره : +'..(msg.from.phone or '----')..'\n'
    local text = text..'🔢 یوزرنیم : '..Username..'\n'
-   local text = text..'🆔 آیدی : '..msg.from.id..'\n\n'
+   local text = text..'🆔 آیدی : '..msg.from.id..'\n'
    local hash = 'rank:'..msg.to.id..':variables'
 	if hash then
 	  local value = redis:hget(hash, msg.from.id)
 	  if not value then
 		if msg.from.id == tonumber(Avira) then
-		 text = text..'👤 مقام : سودو \n\n'
+		 text = text..'👤 مقام : سودو \n'
 		elseif is_sudo(msg) then
-		 text = text..'👤 مقام : مدیر ربات \n\n'
+		 text = text..'👤 مقام : مدیر ربات \n'
 		elseif is_owner(msg) then
-		 text = text..'👤 مقام : مدیر اصلی گروه \n\n'
+		 text = text..'👤 مقام : مدیر اصلی گروه \n'
 		elseif is_momod(msg) then
-		 text = text..'👤 مقام : مدیر گروه \n\n'
+		 text = text..'👤 مقام : مدیر گروه \n'
 		else
-		 text = text..'👤 مقام : فرد عادی \n\n'
+		 text = text..'👤 مقام : فرد عادی \n'
 		end
 	  else
 	   text = text..'👤 مقام : '..value..'\n'
@@ -194,7 +194,7 @@ local function run(msg, matches)
  	 local user = redis:hgetall(uhash)
   	 local um_hash = 'msgs:'..msg.from.id..':'..msg.to.id
 	 user_info_msgs = tonumber(redis:get(um_hash) or 0)
-	 text = text..'Total messages : '..user_info_msgs..'\n\n'
+	 text = text..'✉️ تعداد پیام ها : '..user_info_msgs..'\n'
     if msg.to.type == 'chat' then
 	 text = text..'📝 نام گروه : '..msg.to.title..'\n'
      text = text..'👥 آیدی گروه : '..msg.to.id
