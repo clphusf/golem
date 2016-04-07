@@ -1598,11 +1598,7 @@ local function run(msg, matches)
 				channel_set_about(receiver, about_text, ok_cb, false)
 				return "درباره حذف شد"
 			end
-			if matches[2] == 'mutelist' then
-				chat_id = msg.to.id
-				local hash =  'mute_user:'..chat_id
-					redis:del(hash)
-				return "لیست افراد بی صدا حذف شد"
+			
 			end
 			if matches[2] == 'username' and is_admin1(msg) then
 				local function ok_username_cb (extra, success, result)
@@ -1911,7 +1907,7 @@ local function run(msg, matches)
 			local chat_id = msg.to.id
 			if not has_mutes(chat_id) then
 				set_mutes(chat_id)
-				return mutes_list(chat_id)
+				return "لیست تایپ های بی صدا :"
 			end
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested SuperGroup muteslist")
 			return mutes_list(chat_id)
@@ -2042,7 +2038,6 @@ return {
 	"^[#!/]([Cc]lean) (.*)$",
 	"^[#!/]([Hh]elp)$",
 	"^[#!/]([Mm]uteslist)$",
-	"^[#!/]([Mm]utelist)$",
         "[#!/](mp) (.*)",
 	"[#!/](md) (.*)",
         "^(https://telegram.me/joinchat/%S+)$",
