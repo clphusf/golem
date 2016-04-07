@@ -211,14 +211,17 @@ function create_config( )
     "aparat",
     "arabic_lock",
     "anti_spam",
+    "addplug",
+    "auto_leave",
     "azan",
     "onservice",
     "inrealm",
     "inpm",
+    "info",
     "banhammer",
+    "group_pass",
     "dad",
     "tagall",
-    "calc",
     "plugins",
     "echo",
     "echo+",
@@ -241,6 +244,7 @@ function create_config( )
     "leave_ban",
     "supergroup",
     "msg_checks",
+    "voice",
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
@@ -262,9 +266,6 @@ An advanced administration bot based on TG-CLI written in Lua
 
 !block
 اخراج و اضافه کردن یک فرد به لیست بلاک
-
-!unblock
-خارج کردن شخصی از بلاک
 
 !ban
 بن کردن فردی از سوپرگروه
