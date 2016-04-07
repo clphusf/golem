@@ -42,7 +42,7 @@ local function list_all_plugins(only_enabled)
       text = text..nsum..'. '..v..'  '..status..'\n'
     end
   end
-  local text = text..'\n '..nsum..' پلاگین نصب\n'..nact..' پلاگین فعال و '..nsum-nact..'غیرفعال است'
+  local text = text..'\n '..nsum..' پلاگین نصب \n'..nact..' پلاگین فعال و '..nsum-nact..' غیرفعال است'
   return text
 end
 
@@ -67,7 +67,7 @@ local function list_plugins(only_enabled)
       text = text..v..'  '..status..'\n'
     end
   end
-  local text = text..'\n'..nact..' پلاگین فعال از '..nsum..'پلاگین موجود در سرور.'
+  local text = text..'\n'..nact..' پلاگین فعال از '..nsum..' پلاگین موجود در سرور.'
   return text
 end
 
@@ -208,12 +208,12 @@ return {
           "!plugins reload : فعال شدن همه پلاگین ها" },
           },
   patterns = {
-    "^plug$",
-    "^plug (+) ([%w_%.%-]+)$",
-    "^plug (-) ([%w_%.%-]+)$",
-    "^plug (+) ([%w_%.%-]+) (chat)",
-    "^plug (-) ([%w_%.%-]+) (chat)",
-    "^plug (*)$" },
+    "^[!/#](plug)$",
+    "^[!/#](plug) (+) ([%w_%.%-]+)$",
+    "^[!/#](plug) (-) ([%w_%.%-]+)$",
+    "^[!/#](plug) (+) ([%w_%.%-]+) (chat)",
+    "^[!/#](plug) (-) ([%w_%.%-]+) (chat)",
+    "^[!/#](plug) (*)$" },
   run = run,
   moderated = true, -- set to moderator mode
   --privileged = true
