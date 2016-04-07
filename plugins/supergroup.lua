@@ -772,7 +772,7 @@ function get_message_callback(extra, success, result)
 			send_large_msg(receiver, "["..user_id.."] از لیست افراد بی صدا حذف شد")
 		elseif is_admin1(msg) then
 			mute_user(chat_id, user_id)
-			send_large_msg(receiver, " ["..user_id.."] از لیست افراد بی صدا حذف شد")
+			send_large_msg(receiver, " ["..user_id.."] به لیست افراد بی صدا اضافه شد")
 		end
 	end
 end
