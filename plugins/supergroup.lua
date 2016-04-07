@@ -1721,11 +1721,11 @@ local function run(msg, matches)
 		end
 		if matches[1] == 'public' and is_momod(msg) then
 			local target = msg.to.id
-			if matches[2] == 'no' then
+			if matches[2] == 'yes' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] set group to: public")
 				return set_public_membermod(msg, data, target)
 			end
-			if matches[2] == 'yes' then
+			if matches[2] == 'no' then
 				savelog(msg.to.id, name_log.." ["..msg.from.id.."] set SuperGroup to: not public")
 				return unset_public_membermod(msg, data, target)
 			end
