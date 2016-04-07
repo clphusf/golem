@@ -208,12 +208,14 @@ function create_config( )
   config = {
     enabled_plugins = {
     "admin",
+    "add_sudo",
     "aparat",
     "arabic_lock",
     "anti_spam",
     "addplug",
     "auto_leave",
     "azan",
+    "plugins",
     "onservice",
     "inrealm",
     "inpm",
@@ -221,7 +223,6 @@ function create_config( )
     "filtering",
     "reboot",
     "banhammer",
-    "group_pass",
     "dad",
     "tagall",
     "echo",
@@ -245,7 +246,6 @@ function create_config( )
     "leave_ban",
     "supergroup",
     "msg_checks",
-    "voice",
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
@@ -364,32 +364,26 @@ An advanced administration bot based on TG-CLI written in Lua
 !tosticker
 تبدیل کردن عکس به استیکر توسط ریپلی
 
-!voice متن
-دریافت متن به صورت صدا
-
-!filter + کلمه
-فیلتر کردن یک کلمه
-
-!filter - کلمه
-حذف فیلتر بودن یک کلمه
-
-!filterlist
-دریافت لیست فیلتر
-
-!setpass پسورد
-ذخیره کردن پسورد برای یک گروه
-
-!pass
-دریافت پسورد گروه
-
-!join پسورد
-اضافه شدن به یک گروه توسط پسورد
-
 !info
 دریافت اطلاعات یک فرد
 
 !qr
 دریافت هر چیزی به صورت بارکد
+
+!calc 3+2
+محاسبه عملیات ریاضی
+
+!weather
+دریافت وضعیت آب و هوای یک شهر
+
+!addword کلمه
+اضافه کردن یک کلمه به لیست فیلتر
+
+!rw کلمه
+حذف یک کلمه از لیست فیلترینگ
+
+!badwords
+دریافت لیست فیلترینگ
 
 ** شما می توانید در اول تمام دستورات از ! و / و # استفاده کنید **
 ]],
