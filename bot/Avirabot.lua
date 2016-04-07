@@ -391,9 +391,6 @@ An advanced administration bot based on TG-CLI written in Lua
 !qr
 دریافت هر چیزی به صورت بارکد
 
-!time
-دریافت زمان و تاریخ
-
 ** شما می توانید در اول تمام دستورات از ! و / و # استفاده کنید **
 ]],
   }
