@@ -1,5 +1,3 @@
-﻿--Begin supergrpup.lua
---Check members #Add supergroup
 local function check_member_super(cb_extra, success, result)
   local receiver = cb_extra.receiver
   local data = cb_extra.data
@@ -1986,6 +1984,7 @@ local function run(msg, matches)
 			post_large_msg(receiver, msg.to.peer_id)
 		end
 	end
+end
 
 local function pre_process(msg)
   if not msg.text and msg.media then
