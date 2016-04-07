@@ -222,6 +222,7 @@ function create_config( )
     "echo+1",
     "google",
     "gps",
+    "joke",
     "owners",
     "set",
     "get",
