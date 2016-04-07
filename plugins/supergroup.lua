@@ -1986,7 +1986,6 @@ local function run(msg, matches)
 			post_large_msg(receiver, msg.to.peer_id)
 		end
 	end
-end
 
 local function pre_process(msg)
   if not msg.text and msg.media then
