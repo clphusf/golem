@@ -28,7 +28,7 @@ local function chat_stats(receiver, chat_id)
         return a.msgs > b.msgs
     end
   end)
-  local text = 'Users in this chat : \n'
+  local text = 'افراد درون این گروه : \n'
   for k,user in pairs(users_info) do
     text = text..user.name..' = '..user.msgs..'\n'
   end
@@ -60,7 +60,7 @@ local function chat_stats2(chat_id)
       end
     end)
 
-  local text = 'Users in this chat : \n'
+  local text = 'افراد درون این گروه : \n'
   for k,user in pairs(users_info) do
     text = text..user.name..' = '..user.msgs..'\n'
   end
@@ -83,11 +83,11 @@ local function bot_stats()
   -- Users
   local hash = 'msgs:*:'..our_id
   local r = redis:eval(redis_scan, 1, hash)
-  local text = 'Users: '..r
+  local text = 'افراد : '..r
 
   hash = 'chat:*:users'
   r = redis:eval(redis_scan, 1, hash)
-  text = text..'\nGroups : '..r
+  text = text..'\nگروه ها : '..r
   return text
 end
 local function run(msg, matches)
@@ -99,7 +99,7 @@ local function run(msg, matches)
   end 
   if matches[1]:lower() == "statslist" then
     if not is_momod(msg) then
-      return "For mods only !"
+      return "فقط مخصوص مدیران می باشد"
     end
     local chat_id = msg.to.id
     local name = user_print_name(msg.from)
@@ -109,7 +109,7 @@ local function run(msg, matches)
   if matches[1]:lower() == "stats" then
     if not matches[2] then
       if not is_momod(msg) then
-        return "For mods only !"
+        return "فقط مخصوص مدیران می باشد"
       end
       if msg.to.type == 'chat' or msg.to.type == 'channel' then
 	    local receiver = get_receiver(msg)
@@ -123,14 +123,14 @@ local function run(msg, matches)
     end
     if matches[2] == "avira" then -- Put everything you like :)
       if not is_admin1(msg) then
-        return "For admins only !"
+        return "فقط مخصوص سودو می باشد"
       else
         return bot_stats()
       end
     end
     if matches[2] == "group" then
       if not is_admin1(msg) then
-        return "For admins only !"
+        return "فقط مخصوص سودو می باشد"
       else
         return chat_stats(matches[3])
       end
