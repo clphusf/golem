@@ -208,6 +208,7 @@ function create_config( )
   config = {
     enabled_plugins = {
     "admin",
+    "aparat",
     "arabic_lock",
     "onservice",
     "inrealm",
@@ -221,6 +222,10 @@ function create_config( )
     "echo+",
     "echo+1",
     "google",
+    "tosticker",
+    "sendplug",
+    "spam",
+    "support",
     "gps",
     "joke",
     "owners",
@@ -233,6 +238,7 @@ function create_config( )
     "supergroup",
     "whitelist",
     "msg_checks"
+    "wiki",
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
