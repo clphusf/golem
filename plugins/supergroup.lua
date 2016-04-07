@@ -102,22 +102,6 @@ else
     send_large_msg(cb_extra.receiver, text)
 end
 
---Get and output info about supergroup
-local function callback_info(cb_extra, success, result)
-local title ="ℹ️ اطلاعات سوپرگروه : ["..result.title.."]\n\n"
-local admin_num = "👥 تعداد مدیران : "..result.admins_count.."\n"
-local user_num = "🗣 تعداد اعضا : "..result.participants_count.."\n"
-local kicked_num = "❌ تعداد اعضای حذف شده : "..result.kicked_count.."\n"
-local channel_id = "🆔 آیدی : "..result.peer_id.."\n"
-if result.username then
-	channel_username = "🌐 یوزرنیم : @"..result.username
-else
-	channel_username = ""
-end
-local text = title..admin_num..user_num..kicked_num..channel_id..channel_username
-    send_large_msg(cb_extra.receiver, text)
-end
-
 --Get and output members of supergroup
 local function callback_who(cb_extra, success, result)
 local text = "🗣 افراد :  "..cb_extra.receiver
