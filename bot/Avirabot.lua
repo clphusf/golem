@@ -214,7 +214,6 @@ function create_config( )
     "inrealm",
     "inpm",
     "info",
-    "botnumber",
     "banhammer",
     "tagall",
     "anti_spam",
