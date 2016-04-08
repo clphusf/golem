@@ -240,7 +240,6 @@ function create_config( )
     "spam",
     "get",
     "github",
-    "ctrl",
     "broadcast",
     "invite",
     "expire",
