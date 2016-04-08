@@ -208,12 +208,12 @@ return {
           "!plugins reload : فعال شدن همه پلاگین ها" },
           },
   patterns = {
-    "^[!/#]plug$",
-    "^[!/#]plug (+) ([%w_%.%-]+)$",
-    "^[!/#]plug (-) ([%w_%.%-]+)$",
-    "^[!/#]plug (+) ([%w_%.%-]+) (chat)",
-    "^[!/#]plug (-) ([%w_%.%-]+) (chat)",
-    "^[!/#]plug (*)$" },
+    "^!plug$",
+    "^!plug (+) ([%w_%.%-]+)$",
+    "^!plug (-) ([%w_%.%-]+)$",
+    "^!plug (+) ([%w_%.%-]+) (chat)",
+    "^!plug (-) ([%w_%.%-]+) (chat)",
+    "^!plug (*)$" },
   run = run,
   moderated = true, -- set to moderator mode
   --privileged = true
