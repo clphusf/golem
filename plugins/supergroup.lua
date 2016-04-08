@@ -1165,7 +1165,7 @@ local function run(msg, matches)
 
 		if matches[1] == "modlist" then
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] requested group modlist")
-			return "لیست مدیران : "(msg)
+			return modlist(msg)
 			-- channel_get_admins(receiver,callback, {receiver = receiver})
 		end
 
