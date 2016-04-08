@@ -229,6 +229,7 @@ function create_config( )
     "echo+1",
     "google",
     "tosticker",
+    "feedback",
     "sendplug",
     "instagram",
     "gps",
