@@ -214,21 +214,25 @@ function create_config( )
     "anti_spam",
     "addplug",
     "azan",
+    "calc",
     "plugins",
     "onservice",
     "inrealm",
     "inpm",
-    "info",
     "filtering",
-    "reboot",
     "banhammer",
+    "botinfo",
     "dad",
-    "tagall",
     "echo",
     "echo+",
     "echo+1",
+    "support",
+    "wiki",
+    "joke",
+    "time",
     "google",
     "tosticker",
+    "txt2sticker",
     "sendplug",
     "instagram",
     "gps",
@@ -245,7 +249,6 @@ function create_config( )
     "leave_ban",
     "supergroup",
     "msg_checks",
-    "voice",
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
@@ -378,6 +381,18 @@ An advanced administration bot based on TG-CLI written in Lua
 
 !badwords
 دریافت لیست فیلترینگ
+
+!time (شهر)
+دریافت زمان یک شهر
+
+!wikifa (متن)
+جستجوی یک متن در ویکی پدیا
+
+!joke
+دریافت جوک
+
+!sticker متن ساز
+تبدیل یک متن به استیکر
 
 ** شما می توانید در اول تمام دستورات از ! و / و # استفاده کنید **
 ]],
