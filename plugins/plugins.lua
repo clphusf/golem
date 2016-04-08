@@ -42,7 +42,7 @@ local function list_all_plugins(only_enabled)
       text = text..nsum..'. '..v..'  '..status..'\n'
     end
   end
-  local text = text..'\n '..nsum..' پلاگین نصب \n'..nact..' پلاگین فعال و '..nsum-nact..' غیرفعال است'
+  local text = text..'\n '..nsum..' پلایگن در سرور نصب می باشد \n'..nact..' پلاگین فعال و '..nsum-nact..' غیرفعال است'
   return text
 end
 
@@ -67,7 +67,7 @@ local function list_plugins(only_enabled)
       text = text..v..'  '..status..'\n'
     end
   end
-  local text = text..'\n'..nact..' پلاگین فعال از '..nsum..' پلاگین موجود در سرور.'
+  local text = text..'\n'..nact..' پلاگین فعال از '..nsum..' پلایگن نصب شده در سرور '
   return text
 end
 
@@ -93,14 +93,14 @@ local function enable_plugin( plugin_name )
     -- Reload the plugins
     return reload_plugins( )
   else
-    return 'پلاگین '..plugin_name..'یافت نشد'
+    return 'پلاگین '..plugin_name..' یافت نشد'
   end
 end
 
 local function disable_plugin( name, chat )
   -- Check if plugins exists
   if not plugin_exists(name) then
-    return 'پلاگین '..name..'یافت نشد'
+    return 'پلاگین '..name..' یافت نشد'
   end
   local k = plugin_enabled(name)
   -- Check if plugin is enabled
@@ -138,11 +138,11 @@ local function reenable_plugin_on_chat(receiver, plugin)
   end
 
   if not _config.disabled_plugin_on_chat[receiver] then
-    return 'پلایگن غیر فعال در این چت نداریم'
+    return 'ما پلایگن غیر فعال برای این گروه نداریم'
   end
 
   if not _config.disabled_plugin_on_chat[receiver][plugin] then
-    return 'این پلایگن فعال است'
+    return 'این پلایگن غیر فعال نمی باشد'
   end
 
   _config.disabled_plugin_on_chat[receiver][plugin] = false
@@ -208,12 +208,12 @@ return {
           "!plugins reload : فعال شدن همه پلاگین ها" },
           },
   patterns = {
-    "^[!/#](plug)$",
-    "^[!/#](plug) (+) ([%w_%.%-]+)$",
-    "^[!/#](plug) (-) ([%w_%.%-]+)$",
-    "^[!/#](plug) (+) ([%w_%.%-]+) (chat)",
-    "^[!/#](plug) (-) ([%w_%.%-]+) (chat)",
-    "^[!/#](plug) (*)$" },
+    "^[!/#]plug$",
+    "^[!/#]plug (+) ([%w_%.%-]+)$",
+    "^[!/#]plug (-) ([%w_%.%-]+)$",
+    "^[!/#]plug (+) ([%w_%.%-]+) (chat)",
+    "^[!/#]plug (-) ([%w_%.%-]+) (chat)",
+    "^[!/#]plug (*)$" },
   run = run,
   moderated = true, -- set to moderator mode
   --privileged = true
