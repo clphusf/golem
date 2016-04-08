@@ -24,7 +24,7 @@ return {
   description = "Calculate math expressions with mathjs API",
   usage = "Calc [عملیات ریاضی]:\n+جمع\n-تفریق\n/تقسیم\n*ضرب\n^توان\n",
   patterns = {
-    "^[!/#]([Cc]alc) (.*)$"
+    "^[!/#]calc (.*)$"
   },
   run = run
 }
