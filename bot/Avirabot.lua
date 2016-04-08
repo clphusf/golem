@@ -229,7 +229,6 @@ function create_config( )
     "echo+1",
     "google",
     "tosticker",
-    "feedback",
     "sendplug",
     "instagram",
     "gps",
@@ -370,12 +369,6 @@ An advanced administration bot based on TG-CLI written in Lua
 
 !qr
 دریافت هر چیزی به صورت بارکد
-
-!calc 3+2
-محاسبه عملیات ریاضی
-
-!weather
-دریافت وضعیت آب و هوای یک شهر
 
 !addword کلمه
 اضافه کردن یک کلمه به لیست فیلتر
