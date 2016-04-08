@@ -226,10 +226,8 @@ function create_config( )
     "echo",
     "echo+",
     "echo+1",
-    "support",
     "wiki",
     "joke",
-    "time",
     "google",
     "tosticker",
     "txt2sticker",
@@ -388,9 +386,6 @@ An advanced administration bot based on TG-CLI written in Lua
 
 !badwords
 دریافت لیست فیلترینگ
-
-!time (شهر)
-دریافت زمان یک شهر
 
 !wikifa (متن)
 جستجوی یک متن در ویکی پدیا
