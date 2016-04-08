@@ -401,6 +401,9 @@ An advanced administration bot based on TG-CLI written in Lua
 !sticker متن ساز
 تبدیل یک متن به استیکر
 
+!calc 4-2
+انجام محاسبات ریاضی
+
 ** شما می توانید در اول تمام دستورات از ! و / و # استفاده کنید **
 ]],
   }
