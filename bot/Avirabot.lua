@@ -403,7 +403,17 @@ An advanced administration bot based on TG-CLI written in Lua
 !calc 4-2
 انجام محاسبات ریاضی
 
-** شما می توانید در اول تمام دستورات از ! و / و # استفاده کنید **
+!welcome pm
+ارسال متن خوش آمد گویی به اعضا در پیوی
+
+!welcome group
+ارسال متن خوش آمد گویی به اعضا در گروه
+
+!welcome disable
+غیر فعال سازی پیام خوش آمد گویی در گروه
+
+!linksp
+دریافت لینک ساپورت ربات
 ]],
   }
   serialize_to_file(config, './data/config.lua')
