@@ -70,7 +70,7 @@ local function run(msg, matches)
   end
 
   if welcome_stat ~= 'no' and msg.action and msg.action.type then
-    — do not greet (super)banned users or API bots.
+    do not greet (super)banned users or API bots.
     local action = msg.action.type
     if action == 'chat_add_user' or action == 'chat_add_user_link' or action == "chat_del_user" then
       if msg.action.link_issuer then
