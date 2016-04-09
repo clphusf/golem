@@ -1,10 +1,10 @@
 local function run(msg, matches)
-local mina = 184413821
+local mohammad = 179071599
   local hash = 'rank:variables'
   local text = ''
     local value = redis:hget(hash, msg.from.id)
      if not value then
-        if msg.from.id == tonumber(mina) then 
+        if msg.from.id == tonumber(mohammad) then 
            text = text..'سلام بابایی جونم 😍\n\n'
          elseif is_admin2(msg.from.id) then
            text = text..'سلام \n\n'
