@@ -7,6 +7,9 @@ local function run(msg, matches)
       local receiver = get_receiver(msg)
       send_document(receiver, "./plugins/"..file..".lua", ok_cb, false)
     end
+    
+    if not is_sudo(msg)then
+      return "فقط مخصوص سودو می باشد"
   end
 end
 
