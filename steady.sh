@@ -62,7 +62,7 @@ cat << EOF
  
 EOF
 echo -e "                \e[100m                Steady script           \e[00;37;40m"
-echo -e "               \e[01;34m                    by iicc                \e[00;37;40m"
+echo -e "               \e[01;34m                    by MohammadArak                \e[00;37;40m"
 echo ""
 cat << EOF
  $bld$f1▄ ▀▄   ▄▀ ▄   $f2 ▄▄▄████▄▄▄    $f3  ▄██▄     $f4▄ ▀▄   ▄▀ ▄   $f5 ▄▄▄████▄▄▄    $f6  ▄██▄  $rst
@@ -214,7 +214,7 @@ cat << EOF
  
 EOF
 echo -e "                \e[100m                Steady script           \e[00;37;40m"
-echo -e "               \e[01;34m                    by iicc                \e[00;37;40m"
+echo -e "               \e[01;34m                    by MohammadArak                \e[00;37;40m"
 echo ""
 cat << EOF
  $bld$f1▄ ▀▄   ▄▀ ▄   $f2 ▄▄▄████▄▄▄    $f3  ▄██▄     $f4▄ ▀▄   ▄▀ ▄   $f5 ▄▄▄████▄▄▄    $f6  ▄██▄  $rst
