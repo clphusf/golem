@@ -222,6 +222,7 @@ function create_config( )
     "filtering",
     "banhammer",
     "botinfo",
+    "info",
     "dad",
     "echo",
     "echo+",
@@ -393,7 +394,7 @@ An advanced administration bot based on TG-CLI written in Lua
 !joke
 دریافت جوک
 
-!sticker متن ساز
+!sticker (متن) (سایز)
 تبدیل یک متن به استیکر
 
 !calc 4-2
