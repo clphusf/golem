@@ -240,6 +240,8 @@ function create_config( )
     "owners",
     "set",
     "spam",
+    "support",
+    "stats",
     "get",
     "github",
     "broadcast",
@@ -248,6 +250,7 @@ function create_config( )
     "leave_ban",
     "supergroup",
     "msg_checks",
+    "welcome",
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
