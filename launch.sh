@@ -110,9 +110,6 @@ else
     echo "Run $0 install"
     exit 1
   fi
-  while true; do
-   rm -r ../.telegram-cli/state
-   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/Avirabot.lua -l 1 -E $@
-   sleep 3
-  done
+
+  ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/Avirabot.lua -l 1 -E $@
 fi
