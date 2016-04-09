@@ -28,7 +28,7 @@ local function welcome_message(msg, new_member)
       rules = data[tostring(msg.to.id)]['rules']
       rules = "\nقوانین :\n"..rules.."\n"
     end
-    local welcomes = "خوش اومدی "..new_member..".\n شما وارد شدی به گروه '"..string.gsub(msg.to.print_name, "_", " ").."'\n"
+    local welcomes = "خوش اومدی "..new_member..".\nشما عضو شدی در گروه : '"..string.gsub(msg.to.print_name, "_", " ").."'\n"
     if welcome_stat == 'group' then
       receiver = get_receiver(msg)
     elseif welcome_stat == 'private' then
@@ -49,22 +49,22 @@ local function run(msg, matches)
         data[tostring(msg.to.id)]['settings']['welcome'] = 'group'
         save_data(_config.moderation.data, data)
       end
-      return 'پیغام ورود در حال حاظر فعال است\nپیغام ورود درون گروه نمایش داده خواهد شد'
+      return 'پیغام خوش آمدی گویی در حال حاظر فعال است'
     end
     if matches[2] == 'pm' then
       if welcome_stat ~= 'private' then
         data[tostring(msg.to.id)]['settings']['welcome'] = 'private'
         save_data(_config.moderation.data, data)
       end
-      return 'پیغام ورود در حال حاظر فعال است\nپیغام ورود درون پیوی همه افراد جدید ارسال خواهد شد'
+      return 'پیغام خوش اومد گویی در حال حاظر در پیوی افراد ارسال می شود'
     end
     if matches[2] == 'disable' then
       if welcome_stat == 'no' then
-        return 'پیغام ورود فعال نمی باشد'
+        return 'پیغام خوش اومدی گویی در حال حاظر فعال نیست'
       else
         data[tostring(msg.to.id)]['settings']['welcome'] = 'no'
         save_data(_config.moderation.data, data)
-        return 'پیغام ورود خاموش شد'
+        return 'پیغام خوش آمد گویی غیر فعال شد'
       end
     end
   end
@@ -89,7 +89,7 @@ local function run(msg, matches)
         return nil
       end
       if user_flags == 4352 then
-        print "Ignored. It's an API bot."
+        print "این یک ربات می باشد"
         return nil
       end
     end
@@ -99,7 +99,7 @@ local function run(msg, matches)
     elseif matches[1] == "chat_add_user_link" then
       welcome_message(msg, new_member)
     elseif matches[1] == "chat_del_user" then
-      return 'خداحافظ '..new_member..'!'
+      return 'خداحافظ '..new_member..''
     end
   end
 
@@ -116,7 +116,7 @@ return {
   },
   patterns = {
     "^!!tgservice (.+)$",
-    "^!(welcome) (.*)$"
+    "^[!/#](welcome) (.*)$"
   },
   run = run,
   moderated = true
