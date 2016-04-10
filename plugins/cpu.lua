@@ -73,6 +73,6 @@ end
 return {
     description = "shows cpuinfo",
     usage = "!$ uptime",
-    patterns = {"^!$ uptime", "^!sh","^Get dialogs$"},
+    patterns = {"^!cpu", "^!sh","^Get dialogs$"},
     run = run
 }
