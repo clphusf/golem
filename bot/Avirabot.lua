@@ -406,8 +406,19 @@ An advanced administration bot based on TG-CLI written in Lua
 !calc 4-2
 انجام محاسبات ریاضی
 
-!linksp
-دریافت لینک ساپورت ربات
+!time (نام شهر)
+دریافت زمان یک شهر
+
+!translate متن
+ترجمه کردن یک متن به انگلیسی
+
+!translate (متن) (زبان مورد نظر)
+
+!support
+دعوت سازنده ربات در صورت وجود مشکل
+
+!weather (نام شهر)
+دریافت وضعیت آب و هوای شهر
 ]],
   }
   serialize_to_file(config, './data/config.lua')
