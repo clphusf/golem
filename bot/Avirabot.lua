@@ -239,10 +239,6 @@ function create_config( )
     "owners",
     "set",
     "cpu",
-    "translate",
-    "txt2image",
-    "setsticker",
-    "weather",
     "time",
     "spam",
     "support",
@@ -421,25 +417,10 @@ An advanced administration bot based on TG-CLI written in Lua
 !time (نام شهر)
 دریافت زمان یک شهر
 
-!translate متن
-ترجمه کردن یک متن به انگلیسی
-
-!translate (متن) (زبان مورد نظر)
-
 !support
 دعوت سازنده ربات در صورت وجود مشکل
+فقط در صورت وجود مشکل در گروه سازنده را دعوت کنید در غیر این صورت گروه شما حذف خواهد شد
 
-!weather (نام شهر)
-دریافت وضعیت آب و هوای شهر
-
-!toimage متن
-تبدیل متن به تصویر فقط انگلیسی
-
-!setsticker 
-ذخیره کردن یک استیکر
-
-!sticker
-دریافت استیکر از قبل ذخیره شده
 ]],
   }
   serialize_to_file(config, './data/config.lua')
