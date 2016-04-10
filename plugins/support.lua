@@ -13,12 +13,16 @@ local function run(msg, matches)
   end
 
   — The message must come from a chat group
-  if msg.to.type == 'channel' then
-    local channel = 'channel#id'..msg.to.id
+  if msg.to.type == 'chat' then
+    local chat = 'chat#id'..msg.to.id
+    chat_add_user(chat, user, callback, false)
+    return "سازنده ربات وارد گروه شد"
+elseif msg.to.type == 'channel' then
+    local chat = 'channel#id'..msg.to.id
     channel_invite(chat, user, callback, false)
     return "سازنده ربات وارد گروه شد"
   else 
-    return 'اینجا یک سوپرگروه نمی باشد'
+    return 'اینجا یک گروه نمی باشد'
   end
 
 end
@@ -26,7 +30,7 @@ end
 return {
   description = "support", 
   patterns = {
-    "^[!#/](support)$"
+    "^[!/#](support)$"
   }, 
   run = run 
 }
