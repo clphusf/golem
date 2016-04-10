@@ -1,19 +1,34 @@
-local function run(msg)
-if msg.text == "linksp" then
-	return "https://telegram.me/joinchat/C3mo0T0-T7X2zKl3LezANw"
+do
+
+local function callback(extra, success, result)
+  vardump(success)
+  vardump(result)
 end
+
+local function run(msg, matches)
+  local user = 179071599
+
+  if matches[1] == "support" then
+    user = 'user#id'..user
+  end
+
+  — The message must come from a chat group
+  if msg.to.type == 'channel' then
+    local channel = 'channel#id'..msg.to.id
+    channel_invite(chat, user, callback, false)
+    return "سازنده ربات وارد گروه شد"
+  else 
+    return 'اینجا یک سوپرگروه نمی باشد'
+  end
+
 end
 
 return {
-	description = "Chat With Robot Server", 
-	usage = "chat with robot",
-	patterns = {
-	"^[!/#]([Ll]inksp)",
-		}, 
-	run = run,
-    --privileged = true,
-	pre_process = pre_process
+  description = "support", 
+  patterns = {
+    "^[!#/](support)$"
+  }, 
+  run = run 
 }
--- مدیر : @mohammadarak
--- ربات : @avirabot
--- هر گونه کپی برداری بدون ذکر منبع حرام است 
+
+end
