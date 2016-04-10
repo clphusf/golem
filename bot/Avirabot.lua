@@ -239,6 +239,8 @@ function create_config( )
     "set",
     "cpu",
     "translate",
+    "txt2image",
+    "setsticker",
     "weather",
     "time",
     "spam",
@@ -418,6 +420,15 @@ An advanced administration bot based on TG-CLI written in Lua
 
 !weather (نام شهر)
 دریافت وضعیت آب و هوای شهر
+
+!toimage متن
+تبدیل متن به تصویر فقط انگلیسی
+
+!setsticker 
+ذخیره کردن یک استیکر
+
+!sticker
+دریافت استیکر از قبل ذخیره شده
 ]],
   }
   serialize_to_file(config, './data/config.lua')
