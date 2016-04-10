@@ -212,7 +212,6 @@ function create_config( )
     "aparat",
     "arabic_lock",
     "anti_spam",
-    "addplug",
     "azan",
     "calc",
     "plugins",
