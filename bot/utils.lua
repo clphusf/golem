@@ -955,7 +955,7 @@ end
 function ban_list(chat_id)
 	local hash =  'banned:'..chat_id
 	local list = redis:smembers(hash)
-	local text = "Ban list!\n\n"
+	local text = "لیست افراد بن شده : \n\n"
 	for k,v in pairs(list) do
 	local user_info = redis:hgetall('user:'..v)
 		if user_info and user_info.print_name then
@@ -973,7 +973,7 @@ end
 function banall_list()
 	local hash =  'gbanned'
 	local list = redis:smembers(hash)
-	local text = "Global bans!\n\n"
+	local text = "لیست افراد بن جهانی : \n\n"
 	for k,v in pairs(list) do
     local user_info = redis:hgetall('user:'..v)
 		if user_info and user_info.print_name then
@@ -1017,7 +1017,7 @@ end
 
 --Begin Chat Mutes
 function set_mutes(chat_id)
-	mutes = {[1]= "Audio: no",[2]= "Photo: no",[3]= "All: no",[4]="Documents: no",[5]="Text: no",[6]= "Video: no",[7]= "Gifs: no"}
+	mutes = {[1]= "صوت : no",[2]= "تصاویر : no",[3]= "همه : no",[4]="اسناد : no",[5]="متن : no",[6]= "ویدیو : no",[7]= "گیف : no"}
 	local hash = 'mute:'..chat_id
 	for k,v in pairsByKeys(mutes) do
 	setting = v
@@ -1026,7 +1026,7 @@ function set_mutes(chat_id)
 end
 
 function has_mutes(chat_id)
-	mutes = {[1]= "Audio: no",[2]= "Photo: no",[3]= "All: no",[4]="Documents: no",[5]="Text: no",[6]= "Video: no",[7]= "Gifs: no"}
+	mutes = {[1]= "صوت : no",[2]= "تصاویر : no",[3]= "همه : no",[4]="اسناد : no",[5]="متن : no",[6]= "ویدیو : no",[7]= "گیف : no"}
 	local hash = 'mute:'..chat_id
 	for k,v in pairsByKeys(mutes) do
 		setting = v
@@ -1089,9 +1089,9 @@ end
 function mutes_list(chat_id)
 	local hash =  'mute:'..chat_id
 	local list = redis:smembers(hash)
-	local text = "Mutes for: [ID: "..chat_id.." ]:\n\n"
+	local text = "بی صدا شده ها برای : [ "..chat_id.." ]:\n\n"
 	for k,v in pairsByKeys(list) do
-		text = text.."Mute "..v.."\n"
+		text = text.."بی صدا "..v.."\n"
 	end
   return text
 end
@@ -1100,7 +1100,7 @@ end
 function muted_user_list(chat_id)
 	local hash =  'mute_user:'..chat_id
 	local list = redis:smembers(hash)
-	local text = "Muted Users for: [ID: "..chat_id.." ]:\n\n"
+	local text = "افراد بی صدا شده برای : [ "..chat_id.." ]:\n\n"
 	for k,v in pairsByKeys(list) do
   		local user_info = redis:hgetall('user:'..v)
 		if user_info and user_info.print_name then
@@ -1133,7 +1133,7 @@ function Kick_by_reply(extra, success, result)
 		return
     end
     if is_momod2(result.from.peer_id, result.to.peer_id) then -- Ignore mods,owner,admin
-		return "you can't kick mods,owner and admins"
+		return "شما نمی توانید مدیران را اخراج نمایید"
     end
 		chat_del_user(chat, 'user#id'..result.from.peer_id, ok_cb, false)
 		channel_kick(channel, 'user#id'..result.from.peer_id, ok_cb, false)
@@ -1169,10 +1169,10 @@ function ban_by_reply(extra, success, result)
 		return
 	end
 	if is_momod2(result.from.peer_id, result.to.peer_id) then -- Ignore mods,owner,admin
-		return "you can't kick mods,owner and admins"
+		return "شما نمی توانید مدیران را اخراج کنید"
 	end
 		ban_user(result.from.peer_id, result.to.peer_id)
-		send_large_msg(chat, "User "..result.from.peer_id.." Banned")
+		send_large_msg(chat, "یوزر "..result.from.peer_id.." بن شد")
 	else
 		return
 	end
@@ -1190,8 +1190,8 @@ function ban_by_reply_admins(extra, success, result)
 		return
     end
 		ban_user(result.from.peer_id, result.to.peer_id)
-		send_large_msg(chat, "User "..result.from.peer_id.." Banned")
-		send_large_msg(channel, "User "..result.from.peer_id.." Banned")
+		send_large_msg(chat, "یوزر "..result.from.peer_id.." بن شد")
+		send_large_msg(channel, "یوزر "..result.from.peer_id.." بن شد")
 	else
 		return
 	end
@@ -1205,7 +1205,7 @@ function unban_by_reply(extra, success, result)
 	if tonumber(result.from.peer_id) == tonumber(our_id) then -- Ignore bot
 		return
 	end
-		send_large_msg(chat, "User "..result.from.peer_id.." Unbanned")
+		send_large_msg(chat, "یوزر "..result.from.peer_id.." آنبن شد")
     -- Save on redis
 		local hash =  'banned:'..result.to.peer_id
 		redis:srem(hash, result.from.peer_id)
@@ -1226,7 +1226,7 @@ function banall_by_reply(extra, success, result)
 		local name = user_print_name(result.from)
 		banall_user(result.from.peer_id)
 		chat_del_user(chat, 'user#id'..result.from.peer_id, ok_cb, false)
-		send_large_msg(chat, "User "..name.."["..result.from.peer_id.."] globally banned")
+		send_large_msg(chat, "یوزر "..name.."["..result.from.peer_id.."] بن گلوبالی شد")
 	else
 		return
   end
