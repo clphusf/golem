@@ -48,7 +48,7 @@ end
 
 function run(msg, matches)
   if not is_sudo(msg) then
-    return "You aren't allowed!"
+    return "فقط مخصوص سودو می باشد"
   end
   local receiver = get_receiver(msg)
   if string.match(msg.text, '!sh') then
@@ -57,7 +57,7 @@ function run(msg, matches)
     return
   end
 
-  if string.match(msg.text, '!$ uptime') then
+  if string.match(msg.text, '!cpu') then
     text = run_bash('uname -snr') .. ' ' .. run_bash('whoami')
     text = text .. '\n' .. run_bash('top -b |head -2')
     send_msg(receiver, text, ok_cb, false)
