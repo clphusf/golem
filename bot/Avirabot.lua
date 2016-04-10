@@ -229,6 +229,7 @@ function create_config( )
     "joke",
     "google",
     "tosticker",
+    "tophoto",
     "txt2sticker",
     "sendplug",
     "instagram",
@@ -287,6 +288,12 @@ An advanced administration bot based on TG-CLI written in Lua
 !muteuser 
 بی صدا کردن فرد توسط ریپلی یا یوزرنیم
 برای خارج کردن از بی صدا دوباره دستور را ارسال نمایید
+
+!mutelist
+دریافت لیست افراد بی صدا
+
+!muteslist
+دریافت لیست تایپ های بی صدا
 
 !info 
 دریافت اطلاعات سوپرگروه
@@ -381,8 +388,11 @@ An advanced administration bot based on TG-CLI written in Lua
 !tosticker
 تبدیل کردن عکس به استیکر توسط ریپلی
 
+!tophoto
+تبدیل استیکر به عکس توسط ریپلی
+
 !info
-دریافت اطلاعات یک فرد
+دریافت اطلاعات سوپرگروه
 
 !qr
 دریافت هر چیزی به صورت بارکد
