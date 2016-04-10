@@ -1091,7 +1091,7 @@ function mutes_list(chat_id)
 	local list = redis:smembers(hash)
 	local text = "بی صدا شده ها برای : [ "..chat_id.." ]:\n\n"
 	for k,v in pairsByKeys(list) do
-		text = text.."بی صدا "..v.."\n"
+		text = text..""..v.."\n"
 	end
   return text
 end
