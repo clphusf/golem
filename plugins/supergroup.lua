@@ -2051,6 +2051,7 @@ return {
 	"^[#!/]([Mm]ute) ([^%s]+)$",
 	"^[#!/]([Uu]nmute) ([^%s]+)$",
 	"^[#!/]([Mm]utelist)$",
+	"^[#!/]([Mm]uteslist)$",
 	"^[#!/]([Mm]uteuser)$",
         "^[#!/]([Mm]uteuser) (.*)$",
 	"^[#!/]([Pp]ublic) (.*)$",
