@@ -229,7 +229,6 @@ function create_config( )
     "wiki",
     "joke",
     "google",
-    "music",
     "tosticker",
     "tophoto",
     "txt2sticker",
