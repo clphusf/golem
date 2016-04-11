@@ -243,7 +243,6 @@ function create_config( )
     "spam",
     "support",
     "stats",
-    "server",
     "bot",
     "get",
     "github",
