@@ -243,6 +243,7 @@ function create_config( )
     "spam",
     "support",
     "stats",
+    "server",
     "bot",
     "get",
     "github",
@@ -252,7 +253,7 @@ function create_config( )
     "leave_ban",
     "supergroup",
     "msg_checks",
-    "youtube",
+    "voice",
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
@@ -412,6 +413,8 @@ An advanced administration bot based on TG-CLI written in Lua
 دعوت سازنده ربات در صورت وجود مشکل 
 فقط در صورت وجود مشکل در گروه سازنده را دعوت کنید در غیر این صورت گروه شما حذف خواهد شد 
 
+🔵 !voice (متن) 🔴
+تبدیل متن به صدا
 ]],
   }
   serialize_to_file(config, './data/config.lua')
