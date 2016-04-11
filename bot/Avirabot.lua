@@ -419,6 +419,9 @@ An advanced administration bot based on TG-CLI written in Lua
 
 🔶 !music اسم موزیک 🔷
 دریافت اطلاعات و لینک موزیک
+
+🔵 !feedback (متن) 🔴
+ارسال پیام به سازنده
 ]],
   }
   serialize_to_file(config, './data/config.lua')
