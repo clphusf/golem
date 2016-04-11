@@ -219,6 +219,7 @@ function create_config( )
     "inrealm",
     "inpm",
     "filtering",
+    "feedback",
     "banhammer",
     "botinfo",
     "dad",
@@ -228,6 +229,7 @@ function create_config( )
     "wiki",
     "joke",
     "google",
+    "music",
     "tosticker",
     "tophoto",
     "txt2sticker",
@@ -414,6 +416,9 @@ An advanced administration bot based on TG-CLI written in Lua
 
 🔵 !voice (متن) 🔴
 تبدیل متن به صدا
+
+🔶 !music اسم موزیک 🔷
+دریافت اطلاعات و لینک موزیک
 ]],
   }
   serialize_to_file(config, './data/config.lua')
