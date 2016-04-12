@@ -1,31 +1,35 @@
 do
 
-local function send_title(cb_extra, success, result)
-  if success then
-  send_msg(cb_extra[1], cb_extra[2], ok_cb, false)
- end
-end
-
 local function run(msg, matches)
+
+
+local text = matches[1]
+
+  local b = 1
+
+  while b ~= 0 do
+    textc = text:trim()
+    text,b = text:gsub(' ','.')
     
-  local eq = URL.escape(matches[2])
-local size = URL.escape(matches[1])
-  local url = "http://latex.codecogs.com/png.download?"
-    .."\\dpi{"..size.."}%20\\LARGE%20"..eq
-
+    
+  if msg.to.type == 'user' then 
+      return
+      else
+  local url = "http://latex.codecogs.com/png.download?".."\\dpi{800}%20\\LARGE%20"..textc
   local receiver = get_receiver(msg)
-  local title = "Edit LaTeX on www.codecogs.com/eqnedit.php?latex="..eq
-  local file = download_to_file(url,'hextor.webp')
-      send_document('channel#id'..msg.to.id, file, ok_cb , false)
+  local file = download_to_file(url,'text.webp')
+      send_audio('channel#id'..msg.to.id, file, ok_cb , false)
 end
-
+end
+  end
 return {
-  description = "Convert LaTeX equation to image",
+  description = "text to sticker",
   usage = {
-    "!tex [equation]: Convert LaTeX equation to image"
+    "!sticker [text]"
   },
   patterns = {
-    "^[!/#](sticker) (.+) (.+)$"
+    "^[!/#]sticker +(.*)$",
+
   },
   run = run
 }
