@@ -208,7 +208,6 @@ function create_config( )
   config = {
     enabled_plugins = {
     "admin",
-    "add_sudo",
     "aparat",
     "arabic_lock",
     "anti_spam",
