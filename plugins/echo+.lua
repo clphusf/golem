@@ -3,7 +3,7 @@ local function run(msg, matches)
     local file = matches[2]
     if is_sudo(msg) then
       local receiver = get_receiver(msg)
-      send_document(receiver, "./data/echo/"..file, ok_cb, false)
+      send_document(receiver, "./file/"..file, ok_cb, false)
     end
   end
 end
