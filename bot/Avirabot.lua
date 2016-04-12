@@ -243,6 +243,7 @@ function create_config( )
     "time",
     "spam",
     "support",
+    "linksp",
     "stats",
     "bot",
     "get",
@@ -414,6 +415,9 @@ An advanced administration bot based on TG-CLI written in Lua
 
 🔵 !feedback (متن) 🔴
 ارسال پیام به سازنده
+
+🔶 !supportlink 🔷
+دریافت لینک گروه ساپورت ربات
 ]],
   }
   serialize_to_file(config, './data/config.lua')
