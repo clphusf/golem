@@ -1,6 +1,6 @@
 do
  local function save_file(name, text)
-    local file = io.open("./data/echo/"..name, "w")
+    local file = io.open("./file/"..name, "w")
     file:write(text)
     file:flush()
     file:close()
