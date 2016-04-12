@@ -319,10 +319,10 @@ An advanced administration bot based on TG-CLI written in Lua
 🔵 !rules 🔴
 دریافت قوانین
 
-🔶 !lock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict] 🔷
+🔶 !lock [links|spam|Arabic|member|rtl|sticker|contacts|strict] 🔷
 قفل کردن تنظیمات سوپرگروه
 
-🔵 !unlock [links|flood|spam|Arabic|member|rtl|sticker|contacts|strict] 🔴
+🔵 !unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict] 🔴
 بازکردن تنظیمات سوپرگروه
 
 🔶 !mute [chat|audio|gifs|photo|video|service] 🔷
