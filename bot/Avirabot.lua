@@ -400,12 +400,6 @@ An advanced administration bot based on TG-CLI written in Lua
 🔵 !wikifa (متن) 🔴
 جستجوی یک متن در ویکی پدیا 
 
-🔶 !joke 🔷
-دریافت جوک 
-
-🔵 !sticker (متن) (سایز) 🔴
-تبدیل یک متن به استیکر 
-
 🔶 !calc 4-2 🔷
 انجام محاسبات ریاضی 
 
@@ -421,12 +415,6 @@ An advanced administration bot based on TG-CLI written in Lua
 
 🔶 !supportlink 🔷
 دریافت لینک گروه ساپورت ربات
-
-🔵 !imdb (نام فیلم) 🔴
-دریافت اطلاعات یک فیلم
-
-🔶 !setuser (یوزرنیم)🔷
-تنظیم کردن یوزرنیم برای یک سوپرگروه
 
 🔵 !weather (نام شهر) 🔴
 دریافت وضعیت آب و هوای یک شهر
