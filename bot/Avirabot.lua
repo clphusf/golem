@@ -208,6 +208,7 @@ function create_config( )
   config = {
     enabled_plugins = {
     "admin",
+    "auto_leave",
     "aparat",
     "arabic_lock",
     "anti_spam",
@@ -217,6 +218,8 @@ function create_config( )
     "onservice",
     "inrealm",
     "inpm",
+    "info",
+    "voice",
     "filtering",
     "feedback",
     "banhammer",
