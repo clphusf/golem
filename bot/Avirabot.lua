@@ -233,7 +233,6 @@ function create_config( )
     "tosticker",
     "tophoto",
     "txt2sticker",
-    "translate",
     "sendplug",
     "instagram",
     "gps",
@@ -416,12 +415,6 @@ function create_config( )
 
 !weather (نام شهر)
 دریافت وضعیت آب و هوای یک شهر
-
-!translate (متن)
-ترجمه یک متن به انگلیسی
-
-!translate (متن) (زبان)
-ترجمه یک متن به زبان دلخواه
 ]],
   }
   serialize_to_file(config, './data/config.lua')
