@@ -1,8 +1,12 @@
+—[[
+— Translate text using Google Translate.
+— http://translate.google.com/translate_a/single?client=t&ie=UTF-8&oe=UTF-8&hl=en&dt=t&tl=en&sl=auto&text=hello
+—]]
 do
 
 function translate(source_lang, target_lang, text)
   local path = "http://translate.google.com/translate_a/single"
-  URL query parameters
+  — URL query parameters
   local params = {
     client = "gtx",
     ie = "UTF-8",
@@ -18,7 +22,7 @@ function translate(source_lang, target_lang, text)
   local url = path..query
 
   local res, code = https.request(url)
-  Return nil if error
+  — Return nil if error
   if code > 200 then return nil end
   local trans = res:gmatch("%[%[%[\"(.*)\"")():gsub("\"(.*)", "")
 
@@ -26,14 +30,14 @@ function translate(source_lang, target_lang, text)
 end
 
 function run(msg, matches)
-  Third pattern
+  — Third pattern
   if #matches == 1 then
     print("First")
     local text = matches[1]
     return translate(nil, nil, text)
   end
 
-  Second pattern
+  — Second pattern
   if #matches == 2 then
     print("Second")
     local target = matches[1]
@@ -41,7 +45,7 @@ function run(msg, matches)
     return translate(nil, target, text)
   end
 
-  First pattern
+  — First pattern
   if #matches == 3 then
     print("Third")
     local source = matches[1]
@@ -60,9 +64,9 @@ return {
     "!translate source,target text",
   },
   patterns = {
-    "^[!/#](translate) ([%w]+),([%a]+) (.+)",
-    "^[!/#](translate) ([%w]+) (.+)",
-    "^[!/#](translate) (.+)",
+    "^!translate ([%w]+),([%a]+) (.+)",
+    "^!translate ([%w]+) (.+)",
+    "^!translate (.+)",
   }, 
   run = run 
 }
