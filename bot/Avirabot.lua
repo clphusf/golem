@@ -256,7 +256,7 @@ function create_config( )
     "msg_checks",
     "weather",
     },
-    sudo_users = {179071599},--Sudo users
+    sudo_users = {our_id},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[🚀 Avirabot v5
 An advanced administration bot based on TG-CLI written in Lua
