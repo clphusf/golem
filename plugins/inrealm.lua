@@ -1013,11 +1013,11 @@ function run(msg, matches)
 				groups_list(msg)
 				send_document("chat#id"..msg.to.id, "./groups/lists/groups.txt", ok_cb, false)
 				send_document("channel#id"..msg.to.id, "./groups/lists/groups.txt", ok_cb, false)
-				return "Group list created" --group_list(msg)
+				return "لیست گروها ایجاد شد" --group_list(msg)
 			elseif msg.to.type == 'user' then
 				groups_list(msg)
 				send_document("user#id"..msg.from.id, "./groups/lists/groups.txt", ok_cb, false)
-				return "Group list created" --group_list(msg)
+				return "لیست گروها ایجاد شد" --group_list(msg)
 			end
 		end
 		if matches[1] == 'list' and matches[2] == 'realms' then
