@@ -1,3 +1,7 @@
+—[[
+— Translate text using Google Translate.
+— http://translate.google.com/translate_a/single?client=t&ie=UTF-8&oe=UTF-8&hl=en&dt=t&tl=en&sl=auto&text=hello
+—]]
 do
 
 function translate(source_lang, target_lang, text)
@@ -11,7 +15,7 @@ function translate(source_lang, target_lang, text)
     dt = "t",
     tl = target_lang or "en",
     sl = source_lang or "auto",
-    tq = URL.escape(text)
+    q = URL.escape(text)
   }
 
   local query = format_http_params(params, true)
