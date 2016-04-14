@@ -7,7 +7,7 @@ function run(msg, matches)
 🔶 !git (یوزرنیم) 🔷
 دریافت اطلاعات یک یوزرنیم در گیت هاب
 
-🔵 !google 🔴
+🔵 *!google* 🔴
 سرچ کردن در گوگل
 
 🔶 !aparat متن 🔷
