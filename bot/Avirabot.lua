@@ -233,6 +233,7 @@ function create_config( )
     "tosticker",
     "tophoto",
     "txt2sticker",
+    "translate",
     "sendplug",
     "instagram",
     "gps",
@@ -258,161 +259,169 @@ function create_config( )
     },
     sudo_users = {our_id},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[🚀 Avirabot v5
-An advanced administration bot based on TG-CLI written in Lua
-
-👤 sudo : @mohammadarak
-]],
+    about_text = [[ ]],
     help_text_realm = [[ ]],
     help_text = [[ ]],
 	help_text_super =[[
 🚀 Avira SuperGroup Commands:
 
-🔶 !owner 🔷
+!owner
 دریافت آیدی مدیر اصلی گروه
 
-🔵 !modlist 🔴
+!modlist
 دریافت لیست معاونان سوپرگروه
 
-🔶 !block 🔷
+!block
 اخراج و اضافه کردن یک فرد به لیست بلاک
 
-🔵 !ban 🔴
+!ban
 بن کردن فردی از سوپرگروه
 
-🔶 !unban 🔷
+!unban
 آنبن کردن فردی از سوپرگروه
 
-🔵 !muteuser 🔴
+!muteuser
 بی صدا کردن فرد توسط ریپلی یا یوزرنیم
 برای خارج کردن از بی صدا دوباره دستور را ارسال نمایید
 
-🔶 !info 🔷
+!info
 دریافت اطلاعات خود
 
-🔵 !id 🔴
+!save (متن) (موضوع)
+ذخیره یک متن
+
+!get (موضوع)
+دریافت متن ذخیره شده
+
+!id
 دریافت آیدی سوپرگروه یا یک فرد
 
-🔵 !setowner 🔴
+!setowner
 تنظیم کردن مدیر اصلی سوپرگروه
 
-🔶 !promote [یوزرنیم|آیدی] 🔷
+!promote [یوزرنیم|آیدی] 
 اضافه کردن مدیر به سوپرگروه
 
-🔵 !demote [یوزرنیم|آیدی] 🔴
+!demote [یوزرنیم|آیدی]
 حذف کردن مدیر از سوپرگروه
 
-🔶 !setname (نام جدید گروه) 🔷
+!setname (نام جدید گروه)
 تنظیم نام گروه
 
-🔵 !setphoto 🔴
+!setphoto
 تنظیم عکس گروه
 
-🔶 !setrules 🔷
+!setrules
 تنظیم قوانین گروه
 
-🔵 !newlink 🔴
+!newlink
 ایجاد لینک جدید
 
-🔶 !link 🔷
+!link
 دریافت لینک
 
-🔵 !rules 🔴
+!rules
 دریافت قوانین
 
-🔶 !lock [links|spam|Arabic|member|rtl|sticker|contacts|strict] 🔷
+!lock [links|spam|Arabic|member|rtl|sticker|contacts|strict]
 قفل کردن تنظیمات سوپرگروه
 
-🔵 !unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict] 🔴
+!unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict]
 بازکردن تنظیمات سوپرگروه
 
-🔶 !mute [chat|audio|gifs|photo|video|service] 🔷
+!mute [chat|audio|gifs|photo|video|service]
 بی صدا کردن یک تایپ در سوپرگروه
 
-🔵 !unmute [chat|audio|gifs|photo|video|service] 🔴
+!unmute [chat|audio|gifs|photo|video|service]
 با صدا کردن یک تایپ در سوپرگروه 
 
-🔶 !setflood [عدد] 🔷
+!setflood [عدد]
 تنظیم کردن حساسیت اسپم
 
-🔵 !settings 🔴
+!settings
 دریافت تنظیمات سوپرگروه
 
-🔶 !banlist 🔷
+!banlist
 دریافت لیست اعضای بن شده
 
-🔵 !clean [rules|about|modlist|mutelist] 🔴
+!clean [rules|about|modlist|mutelist]
 پاک کردن قوانین ، درباره ، اعضای بی صدا و لیست مدیران
 
-🔶 !del 🔷
+!del
 حذف یک پیام توسط ریپلی در سوپرگروه
 
-🔵 !public [yes|no] 🔴
+!public [yes|no]
 پابلیک یا خصوصی کردن یک سوپرگروه
 
-🔶 !support 🔷
+!support
 دعوت سازنده ربات در صورت وجود مشکل 
 فقط در صورت وجود مشکل در گروه سازنده را دعوت کنید در غیر این صورت گروه شما حذف خواهد شد 
 
-🔵 !feedback (متن) 🔴
+!feedback (متن)
 ارسال پیام به سازنده
 
-🔶 !supportlink 🔷
+!supportlink
 دریافت لینک گروه ساپورت ربات
 
-🔶 !git (یوزرنیم) 🔷
+!git (یوزرنیم)
 دریافت اطلاعات یک یوزرنیم در گیت هاب
 
-🔵 !google 🔴
+!google
 سرچ کردن در گوگل
 
-🔶 !aparat متن 🔷
+!aparat متن
 سرچ کردن یک متن در آپارات
 
-🔵 !praytime (شهر) 🔴
+!praytime (شهر)
 دریافت وقت اذان یک شهر
 
-🔶 (بگو (متن 🔷
+بگو )متن(
 تکرار یک متن توسط ربات
 
-🔵 !gif متن 🔴
+!gif متن
 سرچ کردن یک متن و دریافت به صورت گیف
 
-🔶 !gps (شهر) (کشور) 🔷
+!gps (شهر) (کشور)
 دریافت مکان مورد نظر از گوگل
 
-🔵 !insta (یوزرنیم اینستا) 🔴
+!insta (یوزرنیم اینستا)
 سرچ کردن یک یوزرنیم در اینستاگرام
 
-🔶 !tosticker 🔷
+!tosticker
 تبدیل کردن عکس به استیکر توسط ریپلی
 
-🔵 !tophoto 🔴
+!tophoto
 تبدیل استیکر به عکس توسط ریپلی 
 
-🔵 !qr 🔴
+!qr
 دریافت هر چیزی به صورت بارکد
 
-🔶 !addword کلمه 🔷
+!addword کلمه
 اضافه کردن یک کلمه به لیست فیلتر
 
-🔵 !rw کلمه 🔴
+!rw کلمه
 حذف یک کلمه از لیست فیلترینگ 
 
-🔶 !badwords 🔷
+!badwords
 دریافت لیست فیلترینگ 
 
-🔵 !wikifa (متن) 🔴
+!wikifa (متن)
 جستجوی یک متن در ویکی پدیا 
 
-🔶 !calc 4-2 🔷
+!calc 4-2
 انجام محاسبات ریاضی 
 
-🔵 !time (نام شهر) 🔴
+!time (نام شهر)
 دریافت زمان یک شهر 
 
-🔵 !_weather_ (نام شهر) 🔴
+!weather (نام شهر)
 دریافت وضعیت آب و هوای یک شهر
+
+!translate (متن)
+ترجمه یک متن به انگلیسی
+
+!translate (متن) (زبان)
+ترجمه یک متن به زبان دلخواه
 ]],
   }
   serialize_to_file(config, './data/config.lua')
