@@ -215,6 +215,7 @@ function create_config( )
     "azan",
     "calc",
     "plugins",
+    "help_social",
     "onservice",
     "inrealm",
     "inpm",
