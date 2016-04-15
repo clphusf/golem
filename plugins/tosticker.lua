@@ -21,7 +21,7 @@ local function run(msg,matches)
       		end
       	end
     
-      if matches[1] == "tosticker" and if is_momod(msg) then
+      if matches[1] == "tosticker" then
     	redis:get("photo:sticker")  
         load_photo(msg.reply_id, tosticker, msg)
     end
