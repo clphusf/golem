@@ -12,7 +12,7 @@ local text = matches[1]
     text,b = text:gsub(' ','.')
     
     
-  if msg.to.type == 'momod' then 
+  if msg.to.type == 'user' then 
       return
       else
   local url = "http://latex.codecogs.com/png.download?".."\\dpi{800}%20\\LARGE%20"..textc
