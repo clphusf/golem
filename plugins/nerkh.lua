@@ -1,6 +1,8 @@
-local function run(msg)
-if msg.text == "nerkh" then
-	return [[
+do
+
+function run(msg, matches)
+local reply_id = msg['id']
+local text = [[
 	👥 نرخ گروه های آنتی اسپم :
   
   💴 سوپرگروه یک ماهه 5000 تومان
@@ -11,18 +13,18 @@ if msg.text == "nerkh" then
   برای خرید به آیدی زیر مراجعه کنید :
   @mohammadarak
   ]]
+if matches[1] == 'nerkh' then
+    if is_member(msg) then
+reply_msg(reply_id, text, ok_cb, false)
 end
+end 
 end
- return {
-	description = "Chat With Robot Server", 
-	usage = "chat with robot",
-	patterns = {
-	"^[!/#]([Nn]erkh)",
-		}, 
-	run = run,
-    --privileged = true,
-	pre_process = pre_process
+return {
+patterns = {
+"^nerkh$",
+"^[#!/]([Nn]erkh)$",
+},
+run = run
 }
--- مدیر : @mohammadarak
--- ربات : @avirabot
--- هر گونه کپی برداری بدون ذکر منبع حرام است 
+
+end
