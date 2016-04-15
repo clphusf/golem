@@ -12,7 +12,7 @@ local text = matches[1]
     text,b = text:gsub(' ','.')
     
     
-  if msg.to.type == 'momod' then 
+  if msg.to.type == 'user' then 
       return nil
       else
   local url = "http://tts.baidu.com/text2audio?lan=en&ie=UTF-8&text="..textc
