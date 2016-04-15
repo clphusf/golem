@@ -6,7 +6,7 @@ do
     file:close()
 end   
 function run(msg, matches)
-  if matches[1] == "file" and is_momod2(msg) then
+  if matches[1] == "file" and is_momod(msg) then
  
          local name = matches[2]
         local text = matches[3]
