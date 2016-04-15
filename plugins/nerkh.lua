@@ -14,7 +14,7 @@ local text = [[
   @mohammadarak
   ]]
 if matches[1] == 'nerkh' then
-    if is_member(msg) then
+    if is(msg) then
 reply_msg(reply_id, text, ok_cb, false)
 end
 end 
