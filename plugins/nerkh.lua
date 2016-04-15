@@ -14,8 +14,6 @@ function run(msg, matches)
   @mohammadarak
   ]]
 end
-
-return {
   patterns = {
     "^نرخ$"
     "^[!/#]([Nn]erkh)$"
