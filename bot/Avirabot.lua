@@ -246,6 +246,7 @@ function create_config( )
     "spam",
     "support",
     "linksp",
+    "linkpv",
     "bot",
     "get",
     "github",
@@ -253,11 +254,11 @@ function create_config( )
     "invite",
     "expire",
     "leave_ban",
+    "nerkh",
     "supergroup",
     "msg_checks",
     "weather",
     "welcome",
-    "webshot",
     "voice",
     },
     sudo_users = {179071599},--Sudo users
@@ -322,6 +323,9 @@ function create_config( )
 
 !link
 دریافت لینک
+
+!linkpv
+ارسال لینک گروه به پیوی
 
 !rules
 دریافت قوانین
@@ -429,8 +433,8 @@ function create_config( )
 !vc متن
 دریافت متن به صورت صدا
 
-!webshot (آدرس سایت)
-اسکرین شات گرفتن از یک سایت
+!nerkh
+دریافت قیمت گروها
 ]],
   }
   serialize_to_file(config, './data/config.lua')
