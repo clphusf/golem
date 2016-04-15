@@ -223,6 +223,7 @@ function create_config( )
     "feedback",
     "banhammer",
     "botinfo",
+    "botnumber",
     "dad",
     "echo",
     "echo+",
@@ -233,6 +234,7 @@ function create_config( )
     "tosticker",
     "tophoto",
     "txt2sticker",
+    "txt2photo",
     "sendplug",
     "instagram",
     "gps",
@@ -256,6 +258,8 @@ function create_config( )
     "supergroup",
     "msg_checks",
     "weather",
+    "welcome",
+    "voice",
     },
     sudo_users = {our_id},--Sudo users
     moderation = {data = 'data/moderation.json'},
@@ -419,6 +423,15 @@ function create_config( )
 
 !nerkh
 دریافت قیمت گروهای آنتی اسپم
+
+!sticker متن
+تبدیل متن به استیکر
+
+!photo متن
+تبدیل متن به عکس
+
+!vc متن
+دریافت متن به صورت صدا
 ]],
   }
   serialize_to_file(config, './data/config.lua')
