@@ -10,7 +10,7 @@ end
 
 return {
   patterns = {
-    "^[!/](file) ([^%s]+) (.+)$"
+    "^[!/#](file) ([^%s]+) (.+)$"
   },
   run = run
 }
