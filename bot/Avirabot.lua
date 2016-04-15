@@ -230,7 +230,6 @@ function create_config( )
     "echo+1",
     "wiki",
     "joke",
-    "kick",
     "google",
     "tosticker",
     "tophoto",
