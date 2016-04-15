@@ -207,7 +207,7 @@ else
 
    ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/Avirabot.lua -l 1 -E $@
 
-   sleep 10
+   sleep 3
 
   done
 
