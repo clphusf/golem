@@ -234,7 +234,6 @@ function create_config( )
     "tosticker",
     "tophoto",
     "txt2sticker",
-    "txt2photo",
     "sendplug",
     "instagram",
     "gps",
@@ -409,6 +408,12 @@ function create_config( )
 !badwords
 دریافت لیست فیلترینگ 
 
+!msgrem (عددی زیر 100)
+حذف پیام های سوپرگروه به صورت عددی
+
+!file (متن) (نام فایل.فرمت فایل)
+دریافت یک نوشته به صورت فایل با فرمت دلخواه
+
 !wikifa (متن)
 جستجوی یک متن در ویکی پدیا 
 
@@ -426,9 +431,6 @@ function create_config( )
 
 !sticker متن
 تبدیل متن به استیکر
-
-!photo متن
-تبدیل متن به عکس
 
 !vc متن
 دریافت متن به صورت صدا
