@@ -261,7 +261,7 @@ function create_config( )
     "welcome",
     "voice",
     },
-    sudo_users = {our_id},--Sudo users
+    sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[ ]],
     help_text_realm = [[ ]],
