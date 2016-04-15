@@ -5,6 +5,8 @@ local function run(msg, matches)
       local receiver = get_receiver(msg)
       send_document(receiver, "./data/file/"..file, ok_cb, false)
     end
+        if not is_momod(msg) then
+          return "فقط مخصوص مدیران می باشد"
   end
 end
 
