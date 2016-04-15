@@ -251,6 +251,7 @@ function create_config( )
     "broadcast",
     "invite",
     "expire",
+    "nerkh",
     "leave_ban",
     "supergroup",
     "msg_checks",
@@ -415,6 +416,9 @@ function create_config( )
 
 !weather (نام شهر)
 دریافت وضعیت آب و هوای یک شهر
+
+!nerkh
+دریافت قیمت گروهای آنتی اسپم
 ]],
   }
   serialize_to_file(config, './data/config.lua')
