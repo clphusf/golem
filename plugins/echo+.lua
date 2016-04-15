@@ -3,7 +3,7 @@ local function run(msg, matches)
     local file = matches[2]
     if is_momod2(msg) then
       local receiver = get_receiver(msg)
-      send_document(receiver, "./data/file/"..file, ok_cb, false)
+      send_document(receiver, "/data/file/"..file, ok_cb, false)
     end
   end
 end
