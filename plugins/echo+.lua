@@ -1,16 +1,23 @@
-local function run(msg, matches)
-  if matches[1] == "file" then
-    local file = matches[2]
-    if is_momod2(msg) then
-      local receiver = get_receiver(msg)
-      send_document(receiver, "./data/file/"..file, ok_cb, false)
+do
+ local function save_file(name, text)
+    local file = io.open("./data/file/"..name, "w")
+    file:write(text)
+    file:flush()
+    file:close()
+end   
+function run(msg, matches)
+  if matches[1] == "file" and is_sudo(msg) then
+ 
+         local name = matches[2]
+        local text = matches[3]
+        return save_file(name, text)
     end
-  end
-end
-
+   end
 return {
   patterns = {
-    "^[!/](file) ([^%s]+) (.+)$"
+  "^[!/#](file) ([^%s]+) (.+)$"
+
   },
   run = run
 }
+end
