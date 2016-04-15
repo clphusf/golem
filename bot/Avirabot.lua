@@ -209,6 +209,7 @@ function create_config( )
     enabled_plugins = {
     "admin",
     "auto_leave",
+    "addbot",
     "aparat",
     "arabic_lock",
     "anti_spam",
@@ -223,7 +224,6 @@ function create_config( )
     "feedback",
     "banhammer",
     "botinfo",
-    "botnumber",
     "dad",
     "echo",
     "echo+",
@@ -252,12 +252,12 @@ function create_config( )
     "broadcast",
     "invite",
     "expire",
-    "nerkh",
     "leave_ban",
     "supergroup",
     "msg_checks",
     "weather",
     "welcome",
+    "webshot",
     "voice",
     },
     sudo_users = {179071599},--Sudo users
@@ -353,9 +353,6 @@ function create_config( )
 !del
 حذف یک پیام توسط ریپلی در سوپرگروه
 
-!public [yes|no]
-پابلیک یا خصوصی کردن یک سوپرگروه
-
 !support
 دعوت سازنده ربات در صورت وجود مشکل 
 فقط در صورت وجود مشکل در گروه سازنده را دعوت کنید در غیر این صورت گروه شما حذف خواهد شد 
@@ -378,7 +375,7 @@ function create_config( )
 !praytime (شهر)
 دریافت وقت اذان یک شهر
 
-بگو )متن(
+بگو (متن)
 تکرار یک متن توسط ربات
 
 !gif متن
@@ -426,17 +423,14 @@ function create_config( )
 !weather (نام شهر)
 دریافت وضعیت آب و هوای یک شهر
 
-!nerkh
-دریافت قیمت گروهای آنتی اسپم
-
 !sticker متن
 تبدیل متن به استیکر
 
 !vc متن
 دریافت متن به صورت صدا
 
-!nerkh
-دریافت قیمت گروها
+!webshot (آدرس سایت)
+اسکرین شات گرفتن از یک سایت
 ]],
   }
   serialize_to_file(config, './data/config.lua')
