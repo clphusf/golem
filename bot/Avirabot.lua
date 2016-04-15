@@ -434,6 +434,9 @@ function create_config( )
 
 !vc متن
 دریافت متن به صورت صدا
+
+!nerkh
+دریافت قیمت گروها
 ]],
   }
   serialize_to_file(config, './data/config.lua')
