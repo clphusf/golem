@@ -22,7 +22,6 @@ else
 return "فقط مخصوص مدیران گروه می باشد"
 end
 end
-end
 return {
     patterns = {
         '^[!/#](remmsg) (%d*)$'
