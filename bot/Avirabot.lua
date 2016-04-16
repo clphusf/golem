@@ -452,6 +452,9 @@ function create_config( )
 
 !image متن
 تبدیل متن به تصویر
+
+!vote عددی زیر 10
+امتیاز دادن به ربات
 ]],
   }
   serialize_to_file(config, './data/config.lua')
