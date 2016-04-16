@@ -10,7 +10,8 @@ end
 end
 local function run(msg, matches)
 if matches[1] == 'msgrem' then
-        if msg.to.type == 'channel' then
+            if is_owner(msg.from.id, msg.to.id, "settings") then
+            if msg.to.type == 'channel' then
             if tonumber(matches[2]) > 99 or tonumber(matches[2]) < 1 then
             return "خطا عدد انتخاب شده باید زیر 100 باشد"
             end
