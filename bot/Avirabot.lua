@@ -319,6 +319,9 @@ function create_config( )
 !setrules
 تنظیم قوانین گروه
 
+!setabout
+تنظیم شرح گروه
+
 !newlink
 ایجاد لینک جدید
 
@@ -436,6 +439,9 @@ function create_config( )
 
 !nerkh
 دریافت قیمت گروها
+
+!wai
+دریافت مقام فرد
 ]],
   }
   serialize_to_file(config, './data/config.lua')
