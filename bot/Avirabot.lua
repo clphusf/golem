@@ -260,6 +260,7 @@ function create_config( )
     "msg_checks",
     "weather",
     "welcome",
+    "wai",
     "voice",
     },
     sudo_users = {179071599},--Sudo users
