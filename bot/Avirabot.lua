@@ -444,8 +444,14 @@ function create_config( )
 !nerkh
 دریافت قیمت گروها
 
-!wai
-دریافت مقام فرد
+!translate متن
+ترجمه کردن یک متن به انگلیسی
+
+!pilli لینک
+کوتاه کردن لینک
+
+!image متن
+تبدیل متن به تصویر
 ]],
   }
   serialize_to_file(config, './data/config.lua')
