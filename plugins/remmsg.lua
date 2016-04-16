@@ -23,15 +23,15 @@ if matches[1] == 'msgrem' then
     if permissions(msg.from.id, msg.to.id, "settings") then
         if msg.to.type == 'channel' then
             if tonumber(matches[2]) > 99 or tonumber(matches[2]) < 1 then
-            return '🚫 '..lang_text(msg.to.id, 'require_down100')
+            return 'خطا باید عددی زیر 100 باشد'
         end
         delete_msg(msg.id, ok_cb, false)
             get_history(msg.to.peer_id, matches[2] + 1 , history , {chatid = msg.to.peer_id, con = matches[2]})
         else
-        return '🚫 '..lang_text(msg.to.id, 'onlychannel')
+        return 'فقط مخصوص سوپرگروها می باشد'
         end
 else
-return '🚫 '..lang_text(msg.to.id, 'require_mod')
+return 'فقط مخصوص مدیران می باشد'
 end
 elseif matches[1] == 'clear' then
 if matches[2] == 'msgs' then
@@ -40,10 +40,10 @@ if matches[2] == 'msgs' then
            delete_msg(msg.id, ok_cb, false)
             get_history(msg.to.peer_id, 100, allhistory , {chatid = msg.to.peer_id})
         else
-                         return '🚫 '..lang_text(msg.to.id, 'onlychannel')
+                         return 'فقط مخصوص سوپرگروه می باشد'
         end
 else
-return '🚫 '..lang_text(msg.to.id, 'require_mod')
+return 'فقط مخصوص مدیران می باشد'
 end
 end
 end
