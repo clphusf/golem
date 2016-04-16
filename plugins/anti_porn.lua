@@ -22,7 +22,7 @@ end
   end
 end
 local function pre_process(msg)
-if redis;get('porns:'..msg.to.id)
+if redis_get('porns:'..msg.to.id)
 if msg.media then
 if msg.media.type == 'photo' then
 load_photo(msg.id, nuditycheck, msg)
