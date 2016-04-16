@@ -209,6 +209,9 @@ function create_config( )
     enabled_plugins = {
     "admin",
     "auto_leave",
+    "active_user",
+    "anti_porn",
+    "remind",
     "addbot",
     "aparat",
     "arabic_lock",
@@ -236,7 +239,6 @@ function create_config( )
     "tosticker",
     "tophoto",
     "txt2sticker",
-    "txt2image",
     "sendplug",
     "instagram",
     "gps",
@@ -258,7 +260,6 @@ function create_config( )
     "invite",
     "expire",
     "leave_ban",
-    "pilli",
     "nerkh",
     "supergroup",
     "msg_checks",
@@ -445,17 +446,15 @@ function create_config( )
 !nerkh
 دریافت قیمت گروها
 
-!translate متن
-ترجمه کردن یک متن به انگلیسی
-
-!pilli لینک
-کوتاه کردن لینک
-
-!image متن
-تبدیل متن به تصویر
-
 !vote عددی زیر 10
 امتیاز دادن به ربات
+
+!msguser 
+دریافت لیست پیام های افراد
+
+!remind (متن) (زمان)
+مثال : !remind 720h0m0s امتحان ریاضی دارم
+یاد آوری متن توسط ربات
 ]],
   }
   serialize_to_file(config, './data/config.lua')
