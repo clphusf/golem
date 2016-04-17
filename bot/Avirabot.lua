@@ -257,7 +257,7 @@ function create_config( )
    "setabout",
    "social",
    "spam",
-   "suergroup",
+   "supergroup",
    "support",
    "time",
    "tophoto",
