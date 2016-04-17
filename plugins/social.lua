@@ -88,7 +88,7 @@ local text = [[
 دریافت لیست دستورات مخصوص گروه
 ]]
 if matches[1] == 'socialhelp' and if matches[1] == 'social' then
-    if is_momod(msg) then
+    is_momod(msg) then
 reply_msg(reply_id, text, ok_cb, false)
    if not is_momod(msg) then
 return 'فقط مخصوص مدیران می باشد'
