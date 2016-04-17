@@ -165,7 +165,7 @@ maxname[2] = user.print_name
 	else
 	maxuser[3] = '@'..maxuser[3]
 end
-local text = '♨️فعالان امروز گروه\n1⃣ '..maxname[1]..'〖'..maxuser[1]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[1] + maxph[1] + maxst[1] + maxoth[1]..'\n\n👾استیکر: '..maxst[1]..'\n\n📷تصویر: '..maxph[1]..'\n\n📃 متن: '..maxtex[1]..'\n\n📦 سایر: '..maxoth[1]
+local text = '♨️فعالان امروز گروه\n\n1⃣ '..maxname[1]..'〖'..maxuser[1]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[1] + maxph[1] + maxst[1] + maxoth[1]..'\n\n👾استیکر: '..maxst[1]..'\n\n📷تصویر: '..maxph[1]..'\n\n📃 متن: '..maxtex[1]..'\n\n📦 سایر: '..maxoth[1]
 if maxid[2] then
 	if not maxid[3] then
 text = text..'\n\n 2⃣ '..maxname[2]..' 〖'..maxuser[2]..'〗\n\n📨تعداد پیام های ارسالی: '..maxtex[2] + maxph[2] + maxst[2] + maxoth[2]..'\n\n👾استیکر: '..maxst[2]..'\n\n📷تصویر: '..maxph[2]..'\n\n📃 متن: '..maxtex[2]..'\n\n📦 سایر: '..maxoth[2]
