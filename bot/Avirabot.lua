@@ -212,6 +212,7 @@ function create_config( )
    "admin",
    "anti_fwd",
    "anti_spam",
+   "anti_reply",
    "aparat",
    "arabic_lock",
    "auto_leave",
@@ -337,10 +338,10 @@ function create_config( )
 !rules
 دریافت قوانین
 
-!lock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd]
+!lock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
 قفل کردن تنظیمات سوپرگروه
 
-!unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd]
+!unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
 بازکردن تنظیمات سوپرگروه
 
 !mute [chat|audio|gifs|photo|video|service]
