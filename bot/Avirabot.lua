@@ -247,7 +247,7 @@ function create_config( )
    "msg_checks",
    "nerkh",
    "nerkharz",
-   "oneservice",
+   "onservice",
    "owners",
    "plugins",
    "qr",
