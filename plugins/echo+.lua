@@ -11,8 +11,6 @@ function run(msg, matches)
          local name = matches[2]
         local text = matches[3]
         return save_file(name, text)
-  if not is_momod(msg) then
-   return 'فقط مخصوص مدیران می باشد'
     end
    end
 return {
