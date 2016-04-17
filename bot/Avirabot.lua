@@ -243,6 +243,7 @@ function create_config( )
    "know",
    "leave_ban",
    "linkpv",
+   "linkshorter",
    "msg_checks",
    "nerkh",
    "nerkharz",
