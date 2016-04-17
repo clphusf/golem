@@ -13,7 +13,7 @@ return {
   description = "Reply Your Sent Message",
   usage = "بگو (message) : reply message",
   patterns = {
-    "^بگو +(.+)$"
+    "^[!/#](echo) +(.+)$"
   }, 
 	run = run,
 	moderated = true
