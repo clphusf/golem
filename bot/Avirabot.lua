@@ -394,6 +394,9 @@ function create_config( )
 
 !join support
 عضو شدن در گروه پشتیبانی ربات
+
+!social
+دریافت راهنمای تفریحی
 ]],
   }
   serialize_to_file(config, './data/config.lua')
