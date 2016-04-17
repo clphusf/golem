@@ -207,66 +207,66 @@ function create_config( )
   -- A simple config with basic plugins and ourselves as privileged user
   config = {
     enabled_plugins = {
-    "admin",
-    "auto_leave",
-    "active_user",
-    "anti_porn",
-    "remind",
-    "addbot",
-    "aparat",
-    "arabic_lock",
-    "anti_spam",
-    "anti_fwd",
-    "azan",
-    "calc",
-    "plugins",
-    "onservice",
-    "inrealm",
-    "inpm",
-    "info",
-    "filtering",
-    "feedback",
-    "banhammer",
-    "botinfo",
-    "dad",
-    "echo",
-    "echo+",
-    "echo+1",
-    "translate",
-    "wiki",
-    "joke",
-    "google",
-    "tosticker",
-    "tophoto",
-    "txt2sticker",
-    "sendplug",
-    "instagram",
-    "gps",
-    "gif",
-    "qr",
-    "owners",
-    "set",
-    "cpu",
-    "time",
-    "spam",
-    "support",
-    "setabout",
-    "linksp",
-    "linkpv",
-    "bot",
-    "get",
-    "github",
-    "broadcast",
-    "invite",
-    "expire",
-    "leave_ban",
-    "nerkh",
-    "supergroup",
-    "msg_checks",
-    "weather",
-    "welcome",
-    "vote",
-    "voice",
+   "active_user",
+   "addbot",
+   "admin",
+   "anti_fwd",
+   "anti_spam",
+   "aparat",
+   "arabic_lock",
+   "auto_leave",
+   "azan",
+   "banhammer",
+   "bot",
+   "botinfo",
+   "broadcast",
+   "calc",
+   "cpu",
+   "dad",
+   "echo+",
+   "echo+1",
+   "echo",
+   "expire",
+   "feedback",
+   "filtering",
+   "get",
+   "gif",
+   "github",
+   "google",
+   "gps",
+   "info",
+   "inpm",
+   "inrealm",
+   "instagram",
+   "invite",
+   "join",
+   "know",
+   "leave_ban",
+   "linkpv",
+   "msg_checks",
+   "nerkh",
+   "nerkharz",
+   "oneservice",
+   "owners",
+   "plugins",
+   "qr",
+   "remmsg",
+   "sendplug",
+   "set",
+   "setabout",
+   "social",
+   "spam",
+   "suergroup",
+   "support",
+   "time",
+   "tophoto",
+   "tosticker",
+   "translate",
+   "txt2sticker",
+   "voice",
+   "vote",
+   "weather",
+   "wiki",
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
@@ -282,8 +282,11 @@ function create_config( )
 !modlist
 دریافت لیست معاونان سوپرگروه
 
-!block
+!block (آیدی فرد)
 اخراج و اضافه کردن یک فرد به لیست بلاک
+
+!kick (آیدی فرد)
+اخراج کردن فردی توسط ایدی
 
 !muteuser
 بی صدا کردن فرد توسط ریپلی یا یوزرنیم
@@ -368,39 +371,6 @@ function create_config( )
 !feedback (متن)
 ارسال پیام به سازنده
 
-!supportlink
-دریافت لینک گروه ساپورت ربات
-
-!git (یوزرنیم)
-دریافت اطلاعات یک یوزرنیم در گیت هاب
-
-!google
-سرچ کردن در گوگل
-
-!aparat متن
-سرچ کردن یک متن در آپارات
-
-!praytime (شهر)
-دریافت وقت اذان یک شهر
-
-!gif متن
-سرچ کردن یک متن و دریافت به صورت گیف
-
-!gps (شهر) (کشور)
-دریافت مکان مورد نظر از گوگل
-
-!insta (یوزرنیم اینستا)
-سرچ کردن یک یوزرنیم در اینستاگرام
-
-!tosticker
-تبدیل کردن عکس به استیکر توسط ریپلی
-
-!tophoto
-تبدیل استیکر به عکس توسط ریپلی 
-
-!qr
-دریافت هر چیزی به صورت بارکد
-
 !addword کلمه
 اضافه کردن یک کلمه به لیست فیلتر
 
@@ -413,39 +383,17 @@ function create_config( )
 !msgrem (عددی زیر 100)
 حذف پیام های سوپرگروه به صورت عددی
 
-!file (متن) (نام فایل.فرمت فایل)
-دریافت یک نوشته به صورت فایل با فرمت دلخواه
-
-!wikifa (متن)
-جستجوی یک متن در ویکی پدیا 
-
-!calc 4-2
-انجام محاسبات ریاضی 
-
-!time (نام شهر)
-دریافت زمان یک شهر 
-
-!weather (نام شهر)
-دریافت وضعیت آب و هوای یک شهر
-
-!sticker متن
-تبدیل متن به استیکر
-
-!vc متن
-دریافت متن به صورت صدا
-
-!nerkh
-دریافت قیمت گروها
-
-!vote عددی زیر 10
-امتیاز دادن به ربات
-
 !msguser 
 دریافت لیست پیام های افراد
 
-!remind (متن) (زمان)
-مثال : !remind 720h0m0s امتحان ریاضی دارم
-یاد آوری متن توسط ربات
+!bot off
+خاموش کردن ربات در گروه
+
+!bot on
+روشن کردن ربات در گروه
+
+!join support
+عضو شدن در گروه پشتیبانی ربات
 ]],
   }
   serialize_to_file(config, './data/config.lua')
