@@ -1,8 +1,7 @@
 do
-
-function run(msg, matches)
-local reply_id = msg['id']
-local text = [[
+    function run(msg, matches)
+        
+  local text = [[
 👤 Social Commands :
 
 !git (یوزرنیم)
@@ -87,20 +86,18 @@ local text = [[
 !help
 دریافت لیست دستورات مخصوص گروه
 ]]
-if matches[1] == 'socialhelp' and if matches[1] == 'social' then
-    if is_momod(msg) then
-reply_msg(reply_id, text, ok_cb, false)
-   if not is_momod(msg) then
-return 'فقط مخصوص مدیران می باشد'
-end
+    return text
+  end
 end 
-end
-return {
-patterns = {
-    "^[!/#](socialhelp)$",
-    "^[!/#](social)$",
-},
-run = run
-}
 
-end
+return {
+  description = "show help  ", 
+  usage = {
+    "show the bot help",
+  },
+  patterns = {
+    "^[!#/]([Ss]ocial)$",
+    "^[!#/]([Ss]ocialhelp)$",
+  }, 
+  run = run,
+}
