@@ -219,7 +219,6 @@ function create_config( )
    "azan",
    "banhammer",
    "bot",
-   "botinfo",
    "broadcast",
    "calc",
    "cpu",
@@ -275,7 +274,7 @@ function create_config( )
     help_text_realm = [[ ]],
     help_text = [[ ]],
 	help_text_super =[[
-🚀 Avira SuperGroup Commands:
+Fire Bot SuperGroup Commands:
 
 !owner
 دریافت آیدی مدیر اصلی گروه
