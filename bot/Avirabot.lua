@@ -277,137 +277,141 @@ function create_config( )
     help_text_realm = [[ ]],
     help_text = [[ ]],
 	help_text_super =[[
-Fire Bot SuperGroup Commands:
+🔥Fire Bot🔥 SuperGroup Commands:
 
-!owner
+🔷!owner
 دریافت آیدی مدیر اصلی گروه
 
-!modlist
+🔷!modlist
 دریافت لیست معاونان سوپرگروه
 
-!block (آیدی فرد)
+🔷!block (آیدی فرد)
 اخراج و اضافه کردن یک فرد به لیست بلاک
 
-!kick (آیدی فرد)
+🔷!kick (آیدی فرد)
 اخراج کردن فردی توسط ایدی
 
-!muteuser
+🔷!muteuser
 بی صدا کردن فرد توسط ریپلی یا یوزرنیم
 برای خارج کردن از بی صدا دوباره دستور را ارسال نمایید
 
-!info
+🔷!info
 دریافت اطلاعات خود
 
-!save (متن) (موضوع)
+🔷!save (متن) (موضوع)
 ذخیره یک متن
 
-!get (موضوع)
+🔷!get (موضوع)
 دریافت متن ذخیره شده
 
-!id
+🔷!id
 دریافت آیدی سوپرگروه یا یک فرد
 
-!setowner
+🔷!setowner
 تنظیم کردن مدیر اصلی سوپرگروه
 
-!promote [یوزرنیم|آیدی] 
+🔷!promote [یوزرنیم|آیدی] 
 اضافه کردن مدیر به سوپرگروه
 
-!demote [یوزرنیم|آیدی]
+🔷!demote [یوزرنیم|آیدی]
 حذف کردن مدیر از سوپرگروه
 
-!setname (نام جدید گروه)
+🔷!setname (نام جدید گروه)
 تنظیم نام گروه
 
-!setphoto
+🔷!setphoto
 تنظیم عکس گروه
 
-!setrules
+🔷!setrules
 تنظیم قوانین گروه
 
-!setabout
+🔷!setabout
 تنظیم شرح گروه
 
-!newlink
+🔷!newlink
 ایجاد لینک جدید
 
-!link
+🔷!link
 دریافت لینک
 
-!linkpv
+🔷!linkpv
 ارسال لینک گروه به پیوی
 
-!rules
+🔷!rules
 دریافت قوانین
 
-!lock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
+🔷!lock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
 قفل کردن تنظیمات سوپرگروه
 
-!unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
+🔷!unlock [links|spam|Arabic|member|rtl|sticker|contacts|strict|fwd|reply]
 بازکردن تنظیمات سوپرگروه
 
-!mute [chat|audio|gifs|photo|video|service]
+🔷!mute [chat|audio|gifs|photo|video|service]
 بی صدا کردن یک تایپ در سوپرگروه
 
-!unmute [chat|audio|gifs|photo|video|service]
+🔷!unmute [chat|audio|gifs|photo|video|service]
 با صدا کردن یک تایپ در سوپرگروه 
 
-!setflood [عدد]
+🔷!setflood [عدد]
 تنظیم کردن حساسیت اسپم
 
-!settings
+🔷!settings
 دریافت تنظیمات سوپرگروه
 
-!banlist
+🔷!banlist
 دریافت لیست اعضای بن شده
 
-!clean [rules|about|modlist|mutelist]
+🔷!clean [rules|about|modlist|mutelist]
 پاک کردن قوانین ، درباره ، اعضای بی صدا و لیست مدیران
 
-!del
+🔷!del
 حذف یک پیام توسط ریپلی در سوپرگروه
 
-!support
+🔷!support
 دعوت سازنده ربات در صورت وجود مشکل 
 فقط در صورت وجود مشکل در گروه سازنده را دعوت کنید در غیر این صورت گروه شما حذف خواهد شد 
 
-!feedback (متن)
+🔷!feedback (متن)
 ارسال پیام به سازنده
 
-!addword کلمه
+🔷!addword کلمه
 اضافه کردن یک کلمه به لیست فیلتر
 
-!rw کلمه
+🔷!rw کلمه
 حذف یک کلمه از لیست فیلترینگ 
 
-!badwords
+🔷!badwords
 دریافت لیست فیلترینگ 
 
-!msgrem (عددی زیر 100)
+🔷!msgrem (عددی زیر 100)
 حذف پیام های سوپرگروه به صورت عددی
 
-!msguser 
+🔷!msguser 
 دریافت لیست پیام های افراد
 
-!bot off
+🔷!bot off
 خاموش کردن ربات در گروه
 
-!bot on
+🔷!bot on
 روشن کردن ربات در گروه
 
-!join support
+🔷!join support
 عضو شدن در گروه پشتیبانی ربات
 
-!social
+🔷!social
 دریافت راهنمای تفریحی
-!t2s (text) (color) (font)
+🔷!t2s (text) (color) (font)
 ساخت استیکر رنگی 
-!sticker
+
+🔷!sticker
 تبدیل به استیکر 
-!image
+
+🔷!image
 تبدیل به عکس
-!file 
+
+🔷!file 
 تبدیل به فایل 
+
 🔥Fire Bot🔥
 ]],
   }
