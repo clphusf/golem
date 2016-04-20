@@ -268,7 +268,8 @@ function create_config( )
    "weather",
    "wiki",
    "st",
-   "sticker_tools"
+   "sticker_tools",
+   "me"
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
