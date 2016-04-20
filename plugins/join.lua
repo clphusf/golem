@@ -18,7 +18,7 @@ end
 local function run(msg, matches)
     if matches[1] == 'join' then
 	if matches[2]:lower() == 'support' then
-		local target = 1027493813
+		local target = 
 		local user_id = msg.from.id
 		channel_invite('channel#id'..target, 'user#id'..user_id, inv_cb, {chat_id=chat[1], type='channel'})
 	    elseif string.match(matches[2], '^%d+$') then
