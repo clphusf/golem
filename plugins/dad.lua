@@ -1,7 +1,7 @@
 do
 
 function run(msg, matches)
-local reply_id = msg['id']
+local reply_id = msg['105831687']
 local text = 'سلام بابایی جونم 😍'
 if matches[1] == 'سلام' then
     if is_sudo(msg) then
