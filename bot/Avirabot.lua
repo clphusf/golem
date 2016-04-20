@@ -268,7 +268,8 @@ function create_config( )
    "wiki",
    "st",
    "sticker_tools",
-   "me"
+   "me",
+   "info"
     },
     sudo_users = {105831687},--Sudo users
     moderation = {data = 'data/moderation.json'},
