@@ -9,7 +9,7 @@ function run(msg, matches)
   
   --------------------------------
   
-  برای سفارش به آیدی زیر پیام دهید : @mohammadarak
+ سفارش  : @parsaalemi
   ]]
   end
 return {
