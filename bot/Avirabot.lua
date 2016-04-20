@@ -269,7 +269,8 @@ function create_config( )
    "st",
    "sticker_tools",
    "me",
-   "info"
+   "info",
+   "banner"
     },
     sudo_users = {105831687},--Sudo users
     moderation = {data = 'data/moderation.json'},
@@ -411,6 +412,9 @@ function create_config( )
 
 🔷!file 
 تبدیل به فایل 
+
+🔷!banner
+ساخت بنر
 
 🔥Fire Bot🔥
 ]],
