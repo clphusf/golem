@@ -267,6 +267,8 @@ function create_config( )
    "vote",
    "weather",
    "wiki",
+   "st",
+   "sticker_tools"
     },
     sudo_users = {179071599},--Sudo users
     moderation = {data = 'data/moderation.json'},
@@ -397,6 +399,15 @@ Fire Bot SuperGroup Commands:
 
 !social
 دریافت راهنمای تفریحی
+!t2s (text) (color) (font)
+ساخت استیکر رنگی 
+!sticker
+تبدیل به استیکر 
+!image
+تبدیل به عکس
+!file 
+تبدیل به فایل 
+🔥Fire Bot🔥
 ]],
   }
   serialize_to_file(config, './data/config.lua')
