@@ -16,16 +16,16 @@ local function get_weather(location)
   local conditions = 'شرایط فعلی آب و هوا : '
 
   if weather.weather[1].main == 'Clear' then
-   send_document(get_receiver(msg), "./data/sticker/aftab.webp", ok_cb, false
+   send_document(get_receiver(msg), "./data/sticker/aftab.webp", ok_cb, false)
     conditions = conditions .. 'آفتابی ☀️'
   elseif weather.weather[1].main == 'Clouds' then
-   send_document(get_receiver(msg), "./data/sticker/abr.webp", ok_cb, false
+   send_document(get_receiver(msg), "./data/sticker/abr.webp", ok_cb, false)
     conditions = conditions .. 'ابری ☁️☁️'
   elseif weather.weather[1].main == 'Rain' then
-   send_document(get_receiver(msg), "./data/sticker/baran.webp", ok_cb, false
+   send_document(get_receiver(msg), "./data/sticker/baran.webp", ok_cb, false)
     conditions = conditions .. 'بارانی ☔️'
   elseif weather.weather[1].main == 'Thunderstorm' then
-   send_document(get_receiver(msg), "./data/sticker/toofan.webp", ok_cb, false
+   send_document(get_receiver(msg), "./data/sticker/toofan.webp", ok_cb, false)
     conditions = conditions .. 'طوفانی 🌪🌪🌪🌪'
   elseif weather.weather[1].main == 'Mist' then
     conditions = conditions .. 'مه 🌫'
