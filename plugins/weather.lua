@@ -28,7 +28,6 @@ local function get_weather(location)
    send_document(get_receiver(msg), "./data/sticker/toofan.webp", ok_cb, false
     conditions = conditions .. 'طوفانی 🌪🌪🌪🌪'
   elseif weather.weather[1].main == 'Mist' then
-   send_document(get_receiver(msg), "./data/sticker/meh.webp", ok_cb, false
     conditions = conditions .. 'مه 🌫'
   end
 
