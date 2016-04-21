@@ -1,4 +1,4 @@
-!addplug local BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
+ local BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
 
 local function get_weather(location)
   print("Finding weather in ", location)
@@ -44,4 +44,4 @@ return {
    "^[/!]weather (.*)$",
     },
   run = run
-}   weather.lua
+} 
