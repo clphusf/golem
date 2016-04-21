@@ -270,7 +270,8 @@ function create_config( )
    "sticker_tools",
    "me",
    "info",
-   "banner"
+   "banner",
+   "fire"
     },
     sudo_users = {105831687},--Sudo users
     moderation = {data = 'data/moderation.json'},
