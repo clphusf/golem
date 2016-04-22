@@ -273,7 +273,8 @@ function create_config( )
    "banner",
    "fire",
    "music",
-   "clash"
+   "clash",
+   "req"
     },
     sudo_users = {105831687},--Sudo users
     moderation = {data = 'data/moderation.json'},
