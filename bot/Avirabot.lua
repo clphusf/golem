@@ -274,9 +274,13 @@ function create_config( )
    "fire",
    "music",
    "clash",
-   "req"
+   "req",
+   "stats",
+   "kick",
+   "welcome",
+   ""
     },
-    sudo_users = {105831687},--Sudo users
+    sudo_users = {105831687,123627901,134461890},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[ ]],
     help_text_realm = [[ ]],
