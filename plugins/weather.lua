@@ -1,4 +1,4 @@
-﻿local function temps(K)
+local function temps(K)
 	local F = (K*1.8)-459.67
 	local C = K-273.15
 	return F,C
@@ -113,20 +113,8 @@ end
 
 return {
 	description = "Weather Status",
-	usagehtm = '<tr><td align="center">weather شهر</td><td align="right">اين پلاگين به شما اين امکان را ميدهد که به کاملترين شکل ممکن از وضع'
-يت آب و هواي شهر مورد نظر آگاه شويد همپنين اطلاعات آب و هواي پنجج روز آينده نيز اراه ميشود. دقت کنيد نام شهر را لاتين وارد کنيد جهت  @firebotch بیشتر جوین دهید </td></tr>',
+	usagehtm = '<tr><td align="center">weather شهر</td><td align="right">اين پلاگين به شما اين امکان را ميدهد که به کاملترين شکل ممکن از وضعيت آب و هواي شهر مورد نظر آگاه شويد همپنين اطلاعات آب و هواي پنجج روز آينده نيز اراه ميشود. دقت کنيد نام شهر را لاتين وارد کنيد</td></tr>',
 	usage = {"weather (city) : وضعيت آب و هوا"},
 	patterns = {"^([Ww]eather) (.*)$"},
 	run = run,
 }
-
--- https://query.yahooapis.com/v1/public/yql?q=select%20item.condition%20from%20weather.forecast%20where%20woeid%20in%20%28select%20woeid%20from%20geo.places%281%29%20where%20text%3D%22"..URL.escape(matches[1]).."%22%29&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys
--- celsius = string.format("%.0f", (data.temp - 32) * 5/9)
-
--- jtab.weather[1].description		clear sky",
--- "مختصات جغرافيايي: "..jtab.coord.lon..","..jtab.coord.lat..""
--- jtab.list[i].weather.description		scattered clouds",
--- jtab.list[i].main.humidity
-
---کپی بدون ذکر منبع حرام!
---کانال ما @NotronX_Ch
