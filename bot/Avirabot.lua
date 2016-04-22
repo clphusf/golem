@@ -278,7 +278,7 @@ function create_config( )
    "stats",
    "kick",
    "welcome",
-   ""
+   "tost"
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
     moderation = {data = 'data/moderation.json'},
