@@ -274,7 +274,6 @@ function create_config( )
    "req",
    "stats",
    "kick",
-   "welcome",
    "writer",
    "sms",
    "setwlc",
