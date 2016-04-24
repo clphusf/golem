@@ -1,6 +1,6 @@
 local function run(msg, matches)
 
-  if not is_sudo(msg) then  For Sudoers only !
+  if not is_sudo(msg) then 
 
     return 'فقط برای سودو ها'
 
