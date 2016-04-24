@@ -1,6 +1,6 @@
 local function run(msg, matches)
 	if not is_admin(msg) then
-		return "این قابلیت فقط مربوط به ادمینهاست" -- JOoN  faghat male adminas!  koskhol inhame plugin minevise mizare bara admin
+		return "این قابلیت فقط مربوط به ادمینهاست" 
 	end
 	if #matches < 2 then
 		return "بعد از این دستور، با قید یک فاصله کلمه یا جمله ی مورد نظر را جهت زیبا نویسی وارد کنید"
