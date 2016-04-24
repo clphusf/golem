@@ -106,7 +106,7 @@ local function run(msg, matches)
 		a=a+1
 		result_text = result_text..a.."- "..result[a].."\n\n"
 	end
-	return result_text.."______________________________\nCinderella Project"
+	return result_text.."______________________________\nFire Bot"
 end
 
 return {
@@ -119,7 +119,3 @@ return {
 		},
 	run = run
 }
-
---آب  هوای شهر ها
---کپی بدون منبع حرام
---کانال ما @NotronX_Ch
