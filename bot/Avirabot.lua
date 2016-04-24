@@ -258,10 +258,7 @@ function create_config( )
    "supergroup",
    "support",
    "time",
-   "tophoto",
-   "tosticker",
    "translate",
-   "txt2sticker",
    "voice",
    "vote",
    "weather",
@@ -278,8 +275,12 @@ function create_config( )
    "stats",
    "kick",
    "welcome",
-   "tost",
-   "writer"
+   "writer",
+   "sms",
+   "setwlc",
+   "getwlc",
+   "addplug",
+   "pass"
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
     moderation = {data = 'data/moderation.json'},
