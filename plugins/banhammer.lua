@@ -94,7 +94,7 @@ local function kick_ban_res(extra, success, result)
 		receiver = 'channel#id'..chat_id
 	  end
 	  if success == 0 then
-		return send_large_msg(receiver, "یوزرنیم یافت نشد")
+		return send_large_msg(receiver, "*Error 404\nCannot find user by that username!")
 	  end
       local member_id = result.peer_id
       local user_id = member_id
@@ -103,31 +103,31 @@ local function kick_ban_res(extra, success, result)
       local get_cmd = extra.get_cmd
        if get_cmd == "kick" then
          if member_id == from_id then
-            send_large_msg(receiver, "شما نمی توانید افراد را اخراج کنید")
+            send_large_msg(receiver, "*Error")
 			return
          end
          if is_momod2(member_id, chat_id) and not is_admin2(sender) then
-            send_large_msg(receiver, "شما نمی توانید مدیران را اخراج کنید")
+            send_large_msg(receiver, "*Error\nYou can't kick mods/owner/admins")
 			return
          end
 		 kick_user(member_id, chat_id)
       elseif get_cmd == 'ban' then
         if is_momod2(member_id, chat_id) and not is_admin2(sender) then
-			send_large_msg(receiver, "شما نمی توانید مدیران را بن کنید")
+			send_large_msg(receiver, "You can't ban mods/owner/admins")
 			return
         end
-        send_large_msg(receiver, 'یوزر @'..member..' ['..member_id..'] بن شد')
+        send_large_msg(receiver, 'Done \nUser Banned')
 		ban_user(member_id, chat_id)
       elseif get_cmd == 'unban' then
-        send_large_msg(receiver, 'یوزر @'..member..' ['..member_id..'] آنبن شد')
+        send_large_msg(receiver, 'Done\nUser Unbanned')
         local hash =  'banned:'..chat_id
         redis:srem(hash, member_id)
-        return 'یوزر '..user_id..' آنبن شد'
+        return 'Done\n User Unbanned'
       elseif get_cmd == 'banall' then
-        send_large_msg(receiver, 'یوزر @'..member..' ['..member_id..'] بن گلوبالی شد')
+        send_large_msg(receiver, '> ['..user_id..' ] Banned for all Groups/SuperGroups! (Globally banned)')
 		banall_user(member_id)
       elseif get_cmd == 'unbanall' then
-        send_large_msg(receiver, 'یوزر @'..member..' ['..member_id..'] انبن گلوبالی شد')
+        send_large_msg(receiver, '> ['..user_id..' ] Unbanned for all Groups/SuperGroups! (Unglobally banned)')
 	    unbanall_user(member_id)
     end
 end
@@ -136,7 +136,7 @@ local function run(msg, matches)
 local support_id = msg.from.id
  if matches[1]:lower() == 'id' and msg.to.type == "chat" or msg.to.type == "user" then
     if msg.to.type == "user" then
-      return "🤖 آیدی ربات : "..msg.to.id.. "\n\n🆔 آیدی شما : "..msg.from.id
+      return "Bot ID > |"..msg.to.id.."|\nYour ID > "..msg.from.id
     end
     if type(msg.reply_id) ~= "nil" then
       local print_name = user_print_name(msg.from):gsub("‮", "")
@@ -146,7 +146,7 @@ local support_id = msg.from.id
     elseif matches[1]:lower() == 'id' then
       local name = user_print_name(msg.from)
       savelog(msg.to.id, name.." ["..msg.from.id.."] used /id ")
-      return "👥 آیدی گروه " ..string.gsub(msg.to.print_name, "_", " ").. " :\n\n"..msg.to.id
+      return "> Group ID: "..msg.to.id.."\n> Group Name: "..msg.to.title.."\n> First Name: "..(msg.from.first_name or '').."\n> Last Name: "..(msg.from.last_name or '').."\n> Your ID: "..msg.from.id.."\n> Username: @"..(msg.from.username or '').."\n> Phone Number: +"..(msg.from.phone or '').."\n> Your Link: Telegram.Me/"..(msg.from.username or '')	
     end
   end
   if matches[1]:lower() == 'kickme' and msg.to.type == "chat" then-- /kickme
@@ -184,17 +184,17 @@ local support_id = msg.from.id
          	return
         end
         if not is_admin1(msg) and is_momod2(matches[2], msg.to.id) then
-          	return "شما نمی توانید مدیران را بن کنید"
+          	return "*Error \nYou can't ban mods/owner/admins"
         end
         if tonumber(matches[2]) == tonumber(msg.from.id) then
-          	return "شما نمی توانید افراد را بن کنید"
+          	return "*Error"
         end
         local print_name = user_print_name(msg.from):gsub("‮", "")
 	    local name = print_name:gsub("_", "")
 		local receiver = get_receiver(msg)
         savelog(msg.to.id, name.." ["..msg.from.id.."] baned user ".. matches[2])
         ban_user(matches[2], msg.to.id)
-		send_large_msg(receiver, 'یوزر ['..matches[2]..'] بن شد')
+		send_large_msg(receiver, 'Done\nUser Banned!')
       else
 		local cbres_extra = {
 		chat_id = msg.to.id,
@@ -222,7 +222,7 @@ local support_id = msg.from.id
         	local print_name = user_print_name(msg.from):gsub("‮", "")
 			local name = print_name:gsub("_", "")
         	savelog(msg.to.id, name.." ["..msg.from.id.."] unbaned user ".. matches[2])
-        	return 'یوزر '..user_id..' آنبن شد'
+        	return 'Done\nUser unbanned'
       else
 		local cbres_extra = {
 			chat_id = msg.to.id,
@@ -247,10 +247,10 @@ if matches[1]:lower() == 'kick' then
 			return
 		end
 		if not is_admin1(msg) and is_momod2(matches[2], msg.to.id) then
-			return "شما نمی توانید مدیران را اخراج تمایید"
+			return "*Error \nYou can't kick mods/owner/admins"
 		end
 		if tonumber(matches[2]) == tonumber(msg.from.id) then
-			return "شما نمی توانید افراد را اخراج نمایید"
+			return "*Error"
 		end
     local user_id = matches[2]
     local chat_id = msg.to.id
@@ -288,7 +288,7 @@ end
          	return false
         end
         	banall_user(targetuser)
-       		return 'یوزر ['..user_id..' ] بن گلوبالی شد'
+       		return '> ['..user_id..' ] Banned for all Groups/SuperGroups! (Globally banned)'
      else
 	local cbres_extra = {
 		chat_id = msg.to.id,
@@ -308,7 +308,7 @@ end
           	return false
         end
        		unbanall_user(user_id)
-        	return 'یوزر ['..user_id..' ] آنبن گلوبالی شد'
+        	return '> ['..user_id..' ] Unbanned for all Groups/SuperGroups! (Unglobally banned)'
     else
 		local cbres_extra = {
 			chat_id = msg.to.id,
@@ -332,9 +332,9 @@ return {
     "^[#!/]([Bb]anlist) (.*)$",
     "^[#!/]([Bb]anlist)$",
     "^[#!/]([Gg]banlist)$",
-    "^[#!/]([Kk]ickme)",
+	"^[#!/]([Kk]ickme)",
     "^[#!/]([Kk]ick)$",
-    "^[#!/]([Bb]an)$",
+	"^[#!/]([Bb]an)$",
     "^[#!/]([Bb]an) (.*)$",
     "^[#!/]([Uu]nban) (.*)$",
     "^[#!/]([Uu]nbanall) (.*)$",
