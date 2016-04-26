@@ -115,6 +115,6 @@ return {
 	description = "Weather Status",
 	usagehtm = '<tr><td align="center">weather شهر</td><td align="right">اين پلاگين به شما اين امکان را ميدهد که به کاملترين شکل ممکن از وضعيت آب و هواي شهر مورد نظر آگاه شويد همپنين اطلاعات آب و هواي پنجج روز آينده نيز اراه ميشود. دقت کنيد نام شهر را لاتين وارد کنيد</td></tr>',
 	usage = {"weather (city) : وضعيت آب و هوا"},
-	patterns = {"^(![Ww]eather) (.*)$"},
+	patterns = {"^([Ww]eather) (.*)$"},
 	run = run,
 }
