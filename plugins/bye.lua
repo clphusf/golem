@@ -22,6 +22,7 @@ local function run(msg, matches)
    elseif matches[1]:lower() == "chat_del_user" then
        local bye_name = msg.action.user.first_name
        return '✋😐 خداحافظ \n' ..bye_name 
+       end
     send_document(get_receiver(msg), "./data/audio_2016-04-27_19-39-35.ogg", 
    end
 end
