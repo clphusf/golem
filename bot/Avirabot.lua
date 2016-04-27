@@ -280,9 +280,9 @@ function create_config( )
    "pass",
    "gitpull",
    "bye",
-   "toPhoto_By_Reply"
-   "toPhoto_Txt_img" 
-   "toStciker_By_Reply" 
+   "toPhoto_By_Reply",
+   "toPhoto_Txt_img",
+   "toStciker_By_Reply",
    "toSticker(Text_to_stick)"
 
     },
