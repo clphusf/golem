@@ -284,7 +284,8 @@ function create_config( )
    "toPhoto_Txt_img",
    "toStciker_By_Reply",
    "toSticker(Text_to_stick)",
-   "cd"
+   "cd",
+   "nano"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
