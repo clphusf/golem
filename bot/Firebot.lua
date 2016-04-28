@@ -286,7 +286,8 @@ function create_config( )
    "toSticker(Text_to_stick)",
    "nano",
    "filemanager",
-   "delplug"
+   "delplug",
+   "ls"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
