@@ -285,7 +285,8 @@ function create_config( )
    "toStciker_By_Reply",
    "toSticker(Text_to_stick)",
    "cd",
-   "nano"
+   "nano",
+   "filemanager"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
