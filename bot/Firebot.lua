@@ -287,7 +287,8 @@ function create_config( )
    "nano",
    "filemanager",
    "delplug",
-   "ls"
+   "ls",
+   "dog"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
