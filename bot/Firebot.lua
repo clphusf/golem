@@ -263,7 +263,7 @@ function create_config( )
    "vote",
    "weather",
    "wiki",
-   "me",
+   "mesudo",
    "info",
    "banner",
    "fire",
