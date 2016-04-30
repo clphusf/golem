@@ -2,7 +2,7 @@ do
 
 function translate(source_lang, target_lang, text)
   local path = "http://translate.google.com/translate_a/single"
-  -- URL query parameters
+  — URL query parameters
   local params = {
     client = "gtx",
     ie = "UTF-8",
