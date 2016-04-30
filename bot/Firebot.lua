@@ -288,7 +288,10 @@ function create_config( )
    "filemanager",
    "delplug",
    "ls",
-   "dog"
+   "dog",
+   "setcmd",
+   "ip",
+   "stmaker"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
