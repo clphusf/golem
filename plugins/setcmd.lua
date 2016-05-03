@@ -1,4 +1,4 @@
-do
+ do
 local function save_value(msg, name, value)
   if (not name or not value) then
     return 
@@ -50,5 +50,5 @@ end
 return {
   patterns = {
    "^[!/#](setcommand) ([^%s]+) (.+)$",
-   "^(.+)$",
-  }, 
+   "^([!/#])(.+)$",
+  }
