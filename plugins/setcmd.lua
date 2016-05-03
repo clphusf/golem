@@ -51,4 +51,7 @@ return {
   patterns = {
    "^[!/#](setcommand) ([^%s]+) (.+)$",
    "^([!/#])(.+)$",
-  }
+  }, 
+  run = run 
+}
+end
