@@ -124,10 +124,10 @@ local function kick_ban_res(extra, success, result)
         redis:srem(hash, member_id)
         return 'Done\n User Unbanned'
       elseif get_cmd == 'banall' then
-        send_large_msg(receiver, '> ['..user_id..' ] Banned for all Groups/SuperGroups! (Globally banned)')
+        send_large_msg(receiver, '🔶 ['..user_id..' ] Banned for all Groups/SuperGroups! (Globally banned)')
 		banall_user(member_id)
       elseif get_cmd == 'unbanall' then
-        send_large_msg(receiver, '> ['..user_id..' ] Unbanned for all Groups/SuperGroups! (Unglobally banned)')
+        send_large_msg(receiver, '🔶 ['..user_id..' ] Unbanned for all Groups/SuperGroups! (Unglobally banned)')
 	    unbanall_user(member_id)
     end
 end
@@ -136,7 +136,7 @@ local function run(msg, matches)
 local support_id = msg.from.id
  if matches[1]:lower() == 'id' and msg.to.type == "chat" or msg.to.type == "user" then
     if msg.to.type == "user" then
-      return "Bot ID > |"..msg.to.id.."|\nYour ID > "..msg.from.id
+      return "Bot ID  |"..msg.to.id.."|\nYour ID  "..msg.from.id
     end
     if type(msg.reply_id) ~= "nil" then
       local print_name = user_print_name(msg.from):gsub("‮", "")
