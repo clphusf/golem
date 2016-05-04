@@ -271,14 +271,12 @@ function create_config( )
    "clash",
    "req",
    "stats",
-   "kick",
    "writer",
    "sms",
    "setwlc",
    "getwlc",
    "addplug",
    "pass",
-   "gitpull",
    "bye",
    "toPhoto_By_Reply",
    "toPhoto_Txt_img",
@@ -291,7 +289,8 @@ function create_config( )
    "dog",
    "setcmd",
    "ip",
-   "stmaker"
+   "stmaker",
+   "gituser"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
