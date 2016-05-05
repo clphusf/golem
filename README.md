@@ -2,6 +2,8 @@
 
 [![https://yago.me/tg-bot](https://img.shields.io/badge/💬_Telegram-Fire Bot-blue.svg)](https://telegram.me/avirabot)
 
+<img src="https://github.com/Fire-golem/golem/blob/supergroups/photo_2016-05-05_15-24-19.jpg" align="right" width="300px" />
+
 **An advanced and powerful administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under the [GNU General Public License](https://github.com/SEEDTEAM/TeleSeed/blob/master/LICENSE)**.
 # Features
 
