@@ -291,7 +291,9 @@ function create_config( )
    "ip",
    "stmaker",
    "gituser",
-   "anti_tag"
+   "anti_tag",
+   "lock_emoji",
+   "badwd"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
