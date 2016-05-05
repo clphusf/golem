@@ -569,9 +569,38 @@ end
 			data[tostring(target)]['settings']['lock_badw'] = 'yes'
 		end
         end
+        if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['lock_gif'] then
+			data[tostring(target)]['settings']['lock_gif'] = 'yes'
+		end
+        end
+        if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['lock_ax'] then
+			data[tostring(target)]['settings']['lock_ax'] = 'yes'
+		end
+        end
+        if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['lock_video'] then
+			data[tostring(target)]['settings']['lock_video'] = 'yes'
+		end
+        end
+        if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['lock_audio'] then
+			data[tostring(target)]['settings']['lock_audio'] = 'yes'
+		end
+        end
+        if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['lock_join'] then
+			data[tostring(target)]['settings']['lock_join'] = 'yes'
+		end
+        end
+        if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['lock_share'] then
+			data[tostring(target)]['settings']['lock_share'] = 'yes'
+		end
+        end
   local settings = data[tostring(target)]['settings']
-  local text = "⚙ تنظیمات سوپرگروه :\n\n⚙  قفل لینک : "..settings.lock_link.."\n⚙  قفل فلود : "..settings.flood.."\n⚙ میزان حساسیت اسپم : "..NUM_MSG_MAX.."\n⚙  قفل اسپم : "..settings.lock_spam.."\n⚙  قفل عربی و فارسی : "..settings.lock_arabic.."\n⚙ قفل اعضا : "..settings.lock_member.."\n⚙  قفل کارکتر آر تی ال : "..settings.lock_rtl.."\n⚙ قفل استیکر : "..settings.lock_sticker.."\n⚙ عمومی بودن گروه : "..settings.public.."\n⚙ قفل تنظیمات سختگیرانه : "..settings.strict.."\n⚙ قفل تگ : "..settings.tag.."\n⚙ قفل ایموجی : "..settings.antiemoji.."\n⚙ قفل فحش : "..settings.lock_badw
-  return text
+  local text = "⚙ تنظیمات سوپرگروه :\n\n⚙  قفل لینک : "..settings.lock_link.."\n⚙  قفل فلود : "..settings.flood.."\n⚙ میزان حساسیت اسپم : "..NUM_MSG_MAX.."\n⚙  قفل اسپم : "..settings.lock_spam.."\n⚙  قفل عربی و فارسی : "..settings.lock_arabic.."\n⚙ قفل اعضا : "..settings.lock_member.."\n⚙  قفل کارکتر آر تی ال : "..settings.lock_rtl.."\n⚙ قفل استیکر : "..settings.lock_sticker.."\n⚙ عمومی بودن گروه : "..settings.public.."\n⚙ قفل تنظیمات سختگیرانه : "..settings.strict.."\n⚙ قفل تگ : "..settings.tag.."\n⚙ قفل ایموجی : "..settings.antiemoji.."\n⚙ قفل فحش : "..settings.lock_badw.."\n⚙ قفل گیف : "..settings.lock_gif.."\n⚙ قفل عکس : "..settings.lock_ax.."\n⚙ قفل فیلم : "..settings.lock_video.."\n⚙ قفل صدا : "..settings.lock_audio.."\n⚙ قفل ورودی : "..settings.lock_join.."\n⚙ قفل مخاطبین "..settings.lock_share  return text
 end
 
 local function promote_admin(receiver, member_username, user_id)
