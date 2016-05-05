@@ -290,7 +290,8 @@ function create_config( )
    "setcmd",
    "ip",
    "stmaker",
-   "gituser"
+   "gituser",
+   "anti_tag"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
