@@ -556,7 +556,7 @@ end
         end
         if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['tag'] then
-			data[tostring(target)]['settings']['tag'] = 'no'
+			data[tostring(target)]['settings']['tag'] = 'yes'
 		end
         end
   local settings = data[tostring(target)]['settings']
