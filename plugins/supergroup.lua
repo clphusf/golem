@@ -555,7 +555,7 @@ end
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "⚙ تنظیمات سوپرگروه :\n\n🔹 قفل لینک : "..settings.lock_link.."\n🔹 قفل فلود : "..settings.flood.."\n🔹 میزان حساسیت اسپم : "..NUM_MSG_MAX.."\n🔹 قفل اسپم : "..settings.lock_spam.."\n🔹 قفل عربی و فارسی : "..settings.lock_arabic.."\n🔹 قفل اعضا : "..settings.lock_member.."\n🔹 قفل کارکتر آر تی ال : "..settings.lock_rtl.."\n🔹 قفل استیکر : "..settings.lock_sticker.."\n🔹 عمومی بودن گروه : "..settings.public.."\n🔹 قفل تنظیمات سختگیرانه : "..settings.strict
+  local text = "⚙ تنظیمات سوپرگروه :\n\n⚙  قفل لینک : "..settings.lock_link.."\n⚙  قفل فلود : "..settings.flood.."\n⚙  میزان حساسیت اسپم : "..NUM_MSG_MAX.."\n⚙  قفل اسپم : "..settings.lock_spam.."\n⚙  قفل عربی و فارسی : "..settings.lock_arabic.."\n⚙  قفل اعضا : "..settings.lock_member.."\n⚙  قفل کارکتر آر تی ال : "..settings.lock_rtl.."\n⚙  قفل استیکر : "..settings.lock_sticker.."\n⚙  عمومی بودن گروه : "..settings.public.."\n⚙  قفل تنظیمات سختگیرانه : "..settings.strict
   return text
 end
 
