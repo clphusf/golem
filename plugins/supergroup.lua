@@ -29,6 +29,7 @@ local function check_member_super(cb_extra, success, result)
 		  lock_tgservice = 'yes',
 		  lock_contacts = 'no',
 		  strict = 'no'
+		  tag = 'no'
         }
       }
       save_data(_config.moderation.data, data)
@@ -554,15 +555,11 @@ end
 			data[tostring(target)]['settings']['lock_member'] = 'no'
 		end
         end
-        local group_link_lock = data[tostring(target)]['settings']['tag']
-  if group_link_lock == 'yes' then
-    return 'تگ قفل نیست'
-  else
-    data[tostring(target)]['settings']['tag'] = 'yes'
-    save_data(_config.moderation.data, data)
-    return 'تگ قفل شد'
-  end
-end
+        if data[tostring(target)]['settings'] then
+		if not data[tostring(target)]['settings']['tag'] then
+			data[tostring(target)]['settings']['tag'] = 'no'
+		end
+        end
   local settings = data[tostring(target)]['settings']
   local text = "⚙ تنظیمات سوپرگروه :\n\n⚙  قفل لینک : "..settings.lock_link.."\n⚙  قفل فلود : "..settings.flood.."\n⚙  میزان حساسیت اسپم : "..NUM_MSG_MAX.."\n⚙  قفل اسپم : "..settings.lock_spam.."\n⚙  قفل عربی و فارسی : "..settings.lock_arabic.."\n⚙  قفل اعضا : "..settings.lock_member.."\n⚙  قفل کارکتر آر تی ال : "..settings.lock_rtl.."\n⚙ قفل استیکر : "..settings.lock_sticker.."\n⚙ عمومی بودن گروه : "..settings.public.."\n⚙ قفل تنظیمات سختگیرانه : "..settings.strict.."\n قفل تگ : "..settings.tag
   return text
