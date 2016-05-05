@@ -293,7 +293,13 @@ function create_config( )
    "gituser",
    "anti_tag",
    "lock_emoji",
-   "badwd"
+   "badwd",
+   "lock_audio",
+   "lock_gif",
+   "lock_join", 
+   "lock_share",
+   "lock_photo",
+   "lock_video"
 
     },
     sudo_users = {105831687,123627901,134461890},--Sudo users
